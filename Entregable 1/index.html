@@ -1,24 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <title>Entregable 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Pantalla Principal</title>
 </head>
+<body>
+    <div class="content">
+        <!-- Menu lateral -->
+         <nav class="sidebar">
+            <button class="close-button">X</button>
+            <div class="profile">
+                <img src="img/Logo (1).png" alt="" srcset="">
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Two players</a></li>
+                <li><a href="#">Cook</a></li>
+                <li><a href="#">Log out</a></li>
+            </ul>
+         </nav>
 
-<body class="bg-dark text-white p-5">
-    <h1 class="text-center p-3">Entregable 1 - Interfaces de Usuario e Interacción</h1>
-    <h2 class="text-center p-3">Grupo 26</h2>
-    <h2 class="text-center p-3">Cepeda Victoria - Cuartas Sofia Micaela - Krauel Francisco</h2>
-    <div class="d-flex justify-content-center p-2">
-        <h3 class="text-center m-3">Links</h3>
-        <a href="https://www.figma.com/proto/0MDLxC9viqEO8fY5KYUUDW/Entregable-1---Grupo-26?node-id=0-1&t=KoWlY2LHsj1Un2cI-1" class="btn btn-primary m-3">Presentación</a>
-        <a href="https://www.figma.com/design/0MDLxC9viqEO8fY5KYUUDW/Entregable-1---Grupo-26?node-id=0-1&m=dev&t=aQahmYzcQAXHpaXD-1" class="btn btn-primary m-3">Editor</a>
+         <!-- contenido principal -->
+          <main class="main-content">
+            <!-- barra de busqueda -->
+             <header class="header">
+                <div class="content-nav">
+                    <button class="close-button"><img src="img/☰.png" alt="image button"></button>
+                </div>
+                <div class="profile">
+                    <img src="img/Logo.png" alt="" srcset="">
+                </div>
+                <div class="content-input">
+                    <input type="text" placeholder="search" id="search">
+                </div>
+                <div class="carrito-img"><img src="img/Carrito.svg" alt=""></div>
+                <button id="logout-btn">Log out</button>
+             </header>
+
+             <!-- seccion de juegos -->
+              <section class="games-section">
+                <h2>Recommended</h2>
+                <div class="carousel-track">
+                    <button class="prev"><img src="img/FlechaCarrusel.png" alt=""></button>
+                    <div class="carousel">
+                        <div class="game-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQaLudRt3xQCSpib8ajZaWQ664jRKtstfN9A&s" alt="Game image">
+                            <h3>Grand Thef Auto V</h3>
+                            <p>$50.00</p>
+                            <button id="button-especial">
+                                <img src="img/CarritoBoton (1).svg" alt="Carrito" class="img-button" id="img-button">
+                                <img src="img/ADD TO CAR.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                            </button>
+                        </div>
+                        <div class="game-card">
+                            <img src="img/image 2.png" alt="Game image">
+                            <h3>Fall Guys</h3>
+                            <p>$10.00</p>
+                            <button id="button-especial">
+                                <img src="img/CarritoBoton (1).svg" alt="Carrito" class="img-button" id="img-button">
+                                <img src="img/ADD TO CAR.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                            </button>
+                        </div>
+                        <div class="game-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQaLudRt3xQCSpib8ajZaWQ664jRKtstfN9A&s" alt="Game image">
+                            <h3>Grand Thef Auto V</h3>
+                            <p>$50.00</p>
+                            <button id="button-especial">
+                                <img src="img/CarritoBoton (1).svg" alt="Carrito" class="img-button" id="img-button">
+                                <img src="img/ADD TO CAR.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                            </button>
+                        </div>
+                        <div class="game-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQaLudRt3xQCSpib8ajZaWQ664jRKtstfN9A&s" alt="Game image">
+                            <h3>Grand Thef Auto V</h3>
+                            <p>$50.00</p>
+                            <button id="button-especial">
+                                <img src="img/CarritoBoton (1).svg" alt="Carrito" class="img-button" id="img-button">
+                                <img src="img/ADD TO CAR.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                            </button>
+                        </div>
+                        <div class="game-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQaLudRt3xQCSpib8ajZaWQ664jRKtstfN9A&s" alt="Game image">
+                            <h3>Grand Thef Auto V</h3>
+                            <p>$50.00</p>
+                            <button id="button-especial">
+                                <img src="img/CarritoBoton (1).svg" alt="Carrito" class="img-button" id="img-button">
+                                <img src="img/ADD TO CAR.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                            </button>
+                        </div>
+                        <div class="game-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQaLudRt3xQCSpib8ajZaWQ664jRKtstfN9A&s" alt="Game image">
+                            <h3>Grand Thef Auto V</h3>
+                            <p>$50.00</p>
+                            <button id="button-especial">
+                                <img src="img/CarritoBoton (1).svg" alt="Carrito" class="img-button" id="img-button">
+                                <img src="img/ADD TO CAR.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                            </button>
+                        </div>
+                        <div class="game-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQaLudRt3xQCSpib8ajZaWQ664jRKtstfN9A&s" alt="Game image">
+                            <h3>Grand Thef Auto V</h3>
+                            <p>$50.00</p>
+                            <button id="button-especial">
+                                <img src="img/CarritoBoton (1).svg" alt="Carrito" class="img-button" id="img-button">
+                                <img src="img/ADD TO CAR.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                            </button>
+                        </div>
+                        <div class="game-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQaLudRt3xQCSpib8ajZaWQ664jRKtstfN9A&s" alt="Game image">
+                            <h3>Grand Thef Auto V</h3>
+                            <p>$50.00</p>
+                            <button id="button-especial">
+                                <img src="img/CarritoBoton (1).svg" alt="Carrito" class="img-button" id="img-button">
+                                <img src="img/ADD TO CAR.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                            </button>
+                        </div>
+                        <div class="game-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQaLudRt3xQCSpib8ajZaWQ664jRKtstfN9A&s" alt="Game image">
+                            <h3>Grand Thef Auto V</h3>
+                            <p>$50.00</p>
+                            <button id="button-especial">
+                                <img src="img/CarritoBoton (1).svg" alt="Carrito" class="img-button" id="img-button">
+                                <img src="img/ADD TO CAR.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                            </button>
+                        </div>
+                    </div>
+                <button class="next">
+                    <img src="img/FlechaCarrusel.svg" alt="Flecha Carrusel">
+                </button>    
+                </div>
+            </section>
+
+              <!-- Seccion my-games -->
+               <section class="games-section">
+                <h2>My Games</h2>
+                <button class="arrow left-arrow"><-</button>
+                <div class="carousel-track">
+                    <div class="game-card">
+                        <img src="img/WaterAndFire.jpg" alt="Game image">
+                        <h3>Fireboy & Wategirl</h3>
+                        <button id="button-especial">
+                            <img src="img/joystick.svg" alt="Carrito" class="img-button" id="img-button">
+                            <img src="img/PLAY.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                        </button>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/Sims 4.png" alt="Game image">
+                        <h3>Sims4</h3>
+                        <button id="button-especial">
+                            <img src="img/joystick.svg" alt="Carrito" class="img-button" id="img-button">
+                            <img src="img/PLAY.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                        </button>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/WaterAndFire.jpg" alt="Game image">
+                        <h3>Fireboy & Wategirl</h3>
+                        <button id="button-especial">
+                            <img src="img/joystick.svg" alt="Carrito" class="img-button" id="img-button">
+                            <img src="img/PLAY.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                        </button>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/WaterAndFire.jpg" alt="Game image">
+                        <h3>Fireboy & Wategirl</h3>
+                        <button id="button-especial">
+                            <img src="img/joystick.svg" alt="Carrito" class="img-button" id="img-button">
+                            <img src="img/PLAY.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                        </button>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/WaterAndFire.jpg" alt="Game image">
+                        <h3>Fireboy & Wategirl</h3>
+                        <button id="button-especial">
+                            <img src="img/joystick.svg" alt="Carrito" class="img-button" id="img-button">
+                            <img src="img/PLAY.png" alt="Agregar al carrito" class="img-button" id="img-text">
+                        </button>
+                    </div>
+                </div>
+                <button class="arrow right-arrow">-></button>
+               </section>
+          </main>
+          
+          <!-- Pie de pagina -->
+           <footer>
+            <div class="footer-section">
+                <h4>Game Library</h4>
+                <p>Legal & privacy</p>
+                <p>Online service</p>
+                <p>Update</p>
+                <p>Cookies</p>
+            </div>
+            <div class="footer-section">
+                <h4>Help Center</h4>
+                <p>Security</p>
+                <p>Support</p>
+                <p>Refunds</p>
+            </div>
+            <div class="footer-section">
+                <h4>About us</h4>
+                <p>SVF Gaming Team is a company bringing gamers together through exciting events and competitive experiences. Join us and level up your gaming</p>
+            </div>
+            <div class="footer-section">
+                <h4>Accesibility</h4>
+                <p>ACCESSIBILITY SVF Gaming Team is dedicated to making gaming inclusive and accessible for everyone, ensuring a welcoming experience for all players.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <p>Beauty</p>
+                <p>Shooter</p>
+                <p>Action</p>
+                <p>Horror</p>
+                <p>Logical</p>
+            </div>
+           </footer>
     </div>
-    
+    <script src="script.js"></script>
 </body>
-
 </html>
