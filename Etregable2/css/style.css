@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -20,6 +19,7 @@ nav {
 
 nav div{
     display: flex;
+    align-items: center;
 }
 
 nav div input{
@@ -41,6 +41,87 @@ nav div input{
     background-color: transparent;
     transition: background-color 0.3s;
 }
+
+/* Estilos para el contenedor del menu (oculto por defecto en pantallas pequeñas) */
+.menu-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #A10082;
+    width: auto;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 10;
+}
+
+.sections {
+    position: relative;
+    z-index: 5;
+}
+/* Mostrar el menú cuando la clase 'active' esté presente */
+.menu-content.active {
+    display: flex;
+}
+
+/* Estilos generales para el botón de hamburguesa */
+.close-button {
+    display: flex;
+    margin: 0px 14px 0px 15px;
+    color: white;
+    border: none;
+    padding: 10px 4px;
+    border-radius: 12px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+.close-button img.active {
+    content: url('../img/HMenuX.svg');
+}
+
+/* Mostrar en pantallas grandes */
+@media (min-width: 768px) {
+    .menu-content {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: #A10082;
+        width: auto;
+        padding: 0;
+        right: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-content.active {
+        display: flex;
+        background-color: #440026;
+        top: 66px;
+        width: 220px;
+        right: 1127px;
+        border-radius: 0px;
+        height: 240;
+        padding: 2px;
+    }
+    ul li a {
+        text-decoration: none;
+        color: wheat;
+    }
+    ul li {
+        list-style-type: none;
+        margin: 10px 10px 10px 0px;
+    }
+    ul {
+        width: 200px;
+        text-align: justify;
+        padding: 20px;
+    }
+
+    /* No ocultar en pantallas grandes */
+    .close-button {
+        display: flex;
+    }
+}
+
 
 /*fin barra de navegacion*/
 
