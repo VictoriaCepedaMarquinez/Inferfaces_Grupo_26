@@ -69,7 +69,7 @@ nav div input{
     margin: 0px 14px 0px 15px;
     color: white;
     border: none;
-    padding: 10px 4px;
+    padding: 6px 4px;
     border-radius: 12px;
     background-color: transparent;
     transition: background-color 0.3s;
@@ -95,7 +95,7 @@ nav div input{
     .menu-content.active {
         display: flex;
         background-color: #440026;
-        top: 66px;
+        top: 59px;
         width: 220px;
         right: 1127px;
         border-radius: 0px;
