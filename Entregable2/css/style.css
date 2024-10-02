@@ -128,66 +128,143 @@ nav div input{
 
 .sections {
     color: white;
-    margin: 4% 0 0 2% ; 
+    margin: 4% 0 0 4% ; 
 
 }
+
+
 .conteiner-products {
-    margin: 2% 0;
     display: flex;          
     overflow-x: auto;        
-    gap: 20px;              
+    gap: 20px;
+    padding: 2%;  
+    overflow: hidden;           
 }
 
-.cardFree {
+.card {
     flex: 0 0 auto;         
     width: 210px;           
     height: 200px;          
     border-radius: 15px;
-    background-color: #FFE659;
     padding-bottom: 0.5%;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Ajusta el desplazamiento y el desenfoque */
-    margin-right: 10px;
-
 }
 
-.cardFree img {
+.card img {
     width: 100%; 
     height: 115px;
     border-radius: 15px 15px 0 0;
-    box-shadow: 0 4px 6px rgba(95, 89, 5, 0.3);
     object-fit: cover;
 
 }
 
 .conteiner-info {
-   color: #13010f;
+    color: white;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 10%;
     padding: 5% 0% 0% 8%;
+    justify-content: space-between;
+    margin-right: 9%;
 }
 
-.conteiner-info div:first-child {
-    margin-right: 40px;
-}
-
-.conteiner-info h3 {
+.card .conteiner-info h3{
     font-size: 90%;
-    text-shadow: 0 4px 6px rgba(95, 89, 5, 0.3);
 }
 
-.playNow {
+.card button {
     font-family: 'Expletus Sans', sans-serif;
     font-weight: bold;
-    background-color: #FFD900;
     border-radius: 10px;
     width: 85%;
     height: 20px;
     border: none;
-    box-shadow: 0 4px 6px rgba(95, 89, 5, 0.3);
     display: block;
     margin: 0 auto ;
 }
+
+.cardFree .card{
+    background-color: #FFE659;
+    box-shadow: 0 4px 9px #AE9504;
+}
+
+.cardFree .card img{
+    box-shadow: 0 4px 6px rgba(95, 89, 5, 0.3);
+}
+
+.cardFree .card .conteiner-info {
+    color: #13010f;
+    margin-bottom: 3%;
+}
+
+.cardFree .conteiner-info h3{
+    text-shadow: 0 4px 6px rgba(95, 89, 5, 0.3);/*hacer lo mismo con add, added y play*/
+}
+
+.cardFree .card button{
+    background-color: #FFD900;
+    box-shadow: 0 4px 9px rgba(95, 89, 5, 0.3);
+}
+
+.cardAdd .card {
+    color: rgb(255, 255, 255);
+    background-color: #ED4ECE;
+    box-shadow: 0 4px 9px #8d0273;
+}
+
+.cardAdd .card img{
+    box-shadow: 0 4px 9px #A10082
+}
+
+.cardAdd .card button {
+    color: rgb(255, 255, 255);
+    background-color: #A10082;
+    box-shadow: 0 4px 6px rgba(89, 2, 94, 0.3);
+}
+
+.cardAdd .card h5{
+    font-size: 73%;
+} 
+
+.cardAdded .card {
+    color: rgb(255, 255, 255);
+    background-color:#6d0758;
+    box-shadow: 0 4px 9px #4B013D
+
+}
+
+.cardAdded .card img{
+    box-shadow: 0 4px 9px #4B013D
+}
+
+.cardAdded .card button {
+    color: rgb(255, 255, 255);
+    background-color: #4B013D;
+    box-shadow: 0 4px 6px rgba(73, 1, 77, 0.3);
+}
+
+.cardAdd .conteiner-info h3,
+.cardAdded .conteiner-info h3 {
+    font-weight: 500;  
+}
+
+.cardPlay .card {
+    background-color: #FF80C8;
+    box-shadow: 0 4px 6px rgba(154, 1, 87, 0.7); 
+}
+
+.cardPlay{
+    padding-bottom: 1%;
+}
+.cardPlay .card img {
+    box-shadow: 0 4px 9px rgba(148, 22, 93, 0.7); 
+}
+
+.cardPlay .card button{
+    background-color: #FF0090;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 9px #CB0675;
+}
+
 
 .menu-icon {
     font-size: 24px;
@@ -237,18 +314,19 @@ nav div input{
 }
 
 .games-section {
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
     width: 100%;
+    gap: 4%;
 }
 .carousel-track {
     width: 100%;
-    margin: 2%;
+    margin: 0 2%;
     display: flex;
     position: relative;
-    overflow: hidden;
-
-   
+    overflow: hidden; 
 }
 
 #search {
