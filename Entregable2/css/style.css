@@ -9,12 +9,26 @@ body {
 }
 
 /*barra de navegacion*/
+.menu-button{
+  width: 60px;
+  height: 50px;
+  margin-right: 10%;
+}
+
+.menu-button img {
+    object-fit: fill;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #A10082;
     padding: 0.5% 1%;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1000; 
 }
 
 nav div{
@@ -75,7 +89,7 @@ nav div input{
     transition: background-color 0.3s;
 }
 .close-button img.active {
-    content: url('../img/HMenuX.svg');
+    content: url('../img/close-button-x.svg');
 }
 
 /* Mostrar en pantallas grandes */
@@ -95,7 +109,7 @@ nav div input{
     .menu-content.active {
         display: flex;
         background-color: #440026;
-        top: 59px;
+        top: 63.2px;
         width: 220px;
         right: 1127px;
         border-radius: 0px;
@@ -134,11 +148,10 @@ nav div input{
 
 
 .conteiner-products {
-    display: flex;          
-    overflow-x: auto;        
+    display: flex;                  
     gap: 20px;
     padding: 2%;  
-    overflow: hidden;           
+    position: sticky;          
 }
 
 .card {
@@ -354,6 +367,7 @@ nav div input{
     flex-wrap: nowrap; 
     width: auto; 
     transition: transform 0.5s ease-in-out; 
+    position: relative;
 }
 
 .prev, .next{
