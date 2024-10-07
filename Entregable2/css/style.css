@@ -384,7 +384,7 @@ nav div input{
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #1c0d24;
+    background-color: #1D0C19;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -399,6 +399,10 @@ body {
   a {
     color: #a29bb6;
     text-decoration: none;
+    font-family: "Mukta", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
   }
   
   .game-info {
@@ -407,7 +411,6 @@ body {
   }
   
   .game-description {
-    background-color: #31203a;
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -441,48 +444,72 @@ body {
     background-color: #270020;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 38px;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;
-    width: 53%;
+    width: 61%;
+    height: 387px;
   }
   
-  .comments-section h3 {
+.comments-section h3 {
     margin-bottom: 20px;
-  }
+}
   
-  .comments {
+.comments {
     display: flex;
     width: 100%;
     margin-bottom: 20px;
-  }
-  
-  .comment {
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    background-color: #530043;
+    padding: 40px;
+    border-radius: 40px;
+    width: 100%;
+    margin: 0px 20px 20px 0px;
+    min-height: 115px
+}
+
+.user-avatars {
+    height: fit-content;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    background-color: #530043;
-    padding: 78px;
-    border-radius: 40px;
-    width: 100px;
-    margin: 0px 25px 0px 0px;
-  }
-  .user-avatars {
+}
+
+.user-info {
     display: flex;
-    position: absolute;
-    justify-content: center;
-    right: 973px;
-    top: 356px;
-  }
-  .user-info {
-    display: flex;
-    margin: 0px 18px 0px 40px;
-    /*white-space: pre-line;*/
-  }
-  .user-info, p {
-    white-space: pre-line;
-  }
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    /* margin-left: 20px;*/
+    border-top: 0.5px solid #ddd3d3;
+    margin-top: 2%;
+}
+
+.nick{
+    margin-top: 4%;
+    font-size: 14px;
+    margin-left: 4%;
+    font-weight: 700;
+}
+.nick p{
+    font-size: 16px;
+}
+
+.text-user {
+    margin-left: 2%;
+    margin-top: 10px; /* Ajuste */
+}
+
+p {
+    font-size: 12px;
+    text-align: left;
+}
   
   textarea {
     width: 100%;
@@ -491,7 +518,7 @@ body {
     padding: 0px;
     border-radius: 10px;
     border: none;
-    margin-bottom: 10px;
+    margin: 18px 0 10px 0px;
     resize: none;
   }
   textarea::placeholder {
@@ -504,10 +531,24 @@ body {
     vertical-align: middle;
     text-align: left;
   }
+  .content-addComent{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1112px;
+    width: 60%;
+    left: 263px;
+  }
   
+  .content-addComent img {
+    position: absolute;
+    height: 34px;
+    top: 26px;
+    left: 7px;
+  }
   .add-comment {
     display: block;
-    margin: 5px 164px;
+    margin: 22px 164px;
     background-color: #32a852;
     font-family: "Duru Sans", sans-serif;
     font-weight: 600;
@@ -526,7 +567,7 @@ body {
   
   .recommended-games {
     text-align: center;
-    margin: 20px;
+    margin: 185px 0px 0px 0px;
   }
   
   .recommended-games h3 {
