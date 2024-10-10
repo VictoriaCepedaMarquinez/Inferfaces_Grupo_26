@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Expletus+Sans:wght@400;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Game</title>
 </head>
-
 <body>
+  <div id="loading-screen"> 
+    <!--Este es el contenedor principal de la pantalla de carga.
+    Se muestra este contenedor cuando la página se está cargando, indicamos al usuario que debe esperar hasta que todo este listo.-->
+    <div class="loading-container">
+      <!-- este div es para organizar los elementos (spinner(indicador de carga) y texto del porcentaje )-->
+        <div class="loading-spinner"></div>
+        <!-- aqui va el spinner (circulo que va a estar girando gracias al css) -->
+        <p id="loading-text">0%</p>
+    </div>
+</div>
+<div id="content">
     <nav>
         <div>
            <div class="menu-button">
@@ -39,57 +47,71 @@
             </ul>
         </div>
     </nav>
-    <div class="game-conteiner">
-        <div class="ruta">Back | My games > Logical > Connect Four</div>
-        <div class="game">
-            <div class="share"><img src="img/Share.svg" alt=""></div>
-            <img class="background-image" src="img/Sims4.png" alt="Imagen de fondo">
-            <div class="img-content">
-                <div class="description-game">
-                    <h2>How to Play Connect Four</h2>
-                    <h3>Connect Four is a two-player strategy game. Players take turns dropping colored discs into a
-                        vertical grid. The goal is to be the first to form a horizontal, vertical, or diagonal line of
-                        four consecutive discs. The game ends when one player connects four discs or the grid is full
-                        without a winner, resulting in a draw.</h3>
+  <!-- Sección del juego -->
+  <div class="game-info">
+    <div class="game-header">
+      <p><a href="#">Back | My games > Logical > Connect Four</a></p>
+      <div class="game-description">
+        <img src="img/GamePage.png" alt="">
                 </div>
             </div>
-            <button class="bottonPlay">Play</button>
-        </div>
-    </div>
-    <footer>
-        <div>
-            <h4>GAME LIBRARY</h4>
-            <p>Legal & privacy</p>
-            <p>Online service</p>
-            <p>Update</p>
-            <p>Cookies</p>
-        </div>
-        <div>
-            <h4>HELP CENTER</h4>
-            <p>Security</p>
-            <p>Support</p>
-            <p>Refunds</p>
-        </div>
-        <div>
-            <h4>ABOUT US</h4>
-            <p>SVF Gaming Team is a company bringing gamers together through exciting events and competitive
-                experiences. Join us and level up your gaming</p>
-        </div>
-        <div>
-            <h4>ACCESIBILITY</h4>
-            <p>SVF Gaming Team is dedicated to making gaming inclusive and accessible for everyone, ensuring a welcoming
-                experience for all players.</p>
-        </div>
-        <div>
-            <h4>CATEGORIES</h4>
-            <p>Beauty</p>
-            <p>Shooter</p>
-            <p>Action</p>
-            <p>Horror</p>
-            <p>Logical</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
-</body>
+  </div>
 
+  <!-- Sección de comentarios -->
+  <div class="comments-section">
+    <h3>Comments on the game</h3>
+    <div class="comments">
+      <div class="comment">
+        <div class="user-avatars">
+          <span><img src="img/User.svg" alt=""></span>
+          <div class="nick"><p>Nick</p></div>
+        </div>
+        <div class="user-info">
+          <div class="text-user"><p>Epic game!</p></div>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="user-avatars">
+          <span><img src="img/User.svg" alt=""></span>
+          <div class="nick"><p>Nick</p></div>
+        </div>
+        <div class="user-info">
+          <div class="text-user"><p>Epic game!</p></div>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="user-avatars">
+          <span><img src="img/User.svg" alt=""></span>
+          <div class="nick"><p>Nick</p></div>
+        </div>
+        <div class="user-info">
+          <div class="text-user"><p>Epic game!</p></div>
+        </div>
+      </div>
+      <div class="content-addComent">
+        <img src="img/User.svg" alt="">
+        <textarea placeholder="Write your comment here"></textarea>
+        <button class="add-comment">Add comment</button>
+      </div>
+    </div>
+  
+  <!-- Sección de juegos recomendados -->
+  <div class="recommended-games">
+    <h3>For you</h3>
+    <div class="game-thumbnails">
+      <img src="img/Rayman.svg" alt="Game 1">
+      <img src="img/Rayman.svg" alt="Game 2">
+      <img src="img/Rayman.svg" alt="Game 3">
+      <img src="img/Rayman.svg" alt="Game 4">
+      <img src="img/Rayman.svg" alt="Game 5">
+      <img src="img/Rayman.svg" alt="Game 6">
+      <img src="img/Rayman.svg" alt="Game 7">
+      <img src="img/Rayman.svg" alt="Game 8">
+      <img src="img/Rayman.svg" alt="Game 9">
+    </div>
+  </div>
+  </div>
+    <script src="script.js"></script>
+    <script src="loader.js"></script>
+</body>
 </html>

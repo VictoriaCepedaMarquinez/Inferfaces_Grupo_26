@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 // Configuración para el carrusel
 const tracks = document.querySelectorAll('.carousel'); // Selecciona todos los carruseles
 const nextButtons = document.querySelectorAll('.next'); // Selecciona todos los botones "next"
@@ -8,7 +9,7 @@ const menuButton = document.querySelector('.close-button');
 const menuContent = document.querySelector('.menu-content');
 
 // Ancho de una tarjeta y el contenedor visible
-const cardWidth = 220;
+const cardWidth = 300;
 const visibleCards = 4; // Número de tarjetas visibles en el carrusel
 
 tracks.forEach((carouselTrack, index) => {
@@ -53,3 +54,35 @@ menuButton.addEventListener('click', () => {
     const menuImage = menuButton.querySelector('img');
     menuImage.classList.toggle('active');
 });
+
+})
+
+
+function startLoading() {
+    
+    const button = document.querySelector('.loading-btn');
+    if(button.textContent !== 'ADEDD TO CAR'){
+    button.classList.add('loading');
+    button.innerHTML = '<span class="spinner"></span>';
+
+    // Simular una acción que tarda 3 segundos en completarse
+    setTimeout(() => {
+        button.classList.remove('loading');
+        button.innerHTML = 'ADEDD TO CAR';
+    }, 2000);
+}
+}
+
+function animateButton() {
+    const button = document.querySelector('.slide-btn');
+    button.classList.add('active');
+
+    // Después de la animación, quitar la clase para poder repetirla
+    setTimeout(() => {
+      //  button.classList.remove('active');
+        
+        // Redirigir a otra página después de que finalice la animación
+        window.location.href = "./game.html";  // Cambia la URL por la que quieras
+    }, 500);  // Duración de la animación en milisegundos
+}
+
