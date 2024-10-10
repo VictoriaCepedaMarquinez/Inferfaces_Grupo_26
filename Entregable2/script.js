@@ -1,55 +1,61 @@
 // Configuración para el carrusel
-const tracks = document.querySelectorAll('.carousel'); // Selecciona todos los carruseles
-const nextButtons = document.querySelectorAll('.next'); // Selecciona todos los botones "next"
-const prevButtons = document.querySelectorAll('.prev'); // Selecciona todos los botones "prev"
+const tracks = document.querySelectorAll('.carousel-track'); // Selecciona todos los tracks
+const visibleCards = 3; // Número de tarjetas visibles en el carrusel
 
-// Configuración para el menú hamburguesa
-const menuButton = document.querySelector('.close-button');
-const menuContent = document.querySelector('.menu-content');
+tracks.forEach((carouselTrack) => {
+    const nextButton = carouselTrack.querySelector('#nextBtn');
+    const prevButton = carouselTrack.querySelector('#prevBtn');
+    const containerProducts = carouselTrack.querySelector('.conteiner-products');
+    
+    const carousel = carouselTrack.querySelector('.carousel');
+    prevButton.classList.add("none");
 
-// Ancho de una tarjeta y el contenedor visible
-const cardWidth = 220;
-const visibleCards = 4; // Número de tarjetas visibles en el carrusel
-
-tracks.forEach((carouselTrack, index) => {
-    const totalCards = carouselTrack.querySelector('.conteiner-products').childElementCount; // Total de tarjetas
-    const maxPosition = -(totalCards - visibleCards) * cardWidth; // Posición máxima que puede alcanzar el carrusel
-
-    let position = 0; // Posición actual del carrusel
-    const nextButton = nextButtons[index];
-    const prevButton = prevButtons[index];
+    let cardWidth = carousel.querySelector(".card").clientWidth;
+    let maxScroll = carousel.scrollWidth - carousel.clientWidth;
 
     // Botón 'Next' - Mueve hacia la izquierda
-    nextButton.addEventListener('click', function() {
-        if (position > maxPosition) { 
-            position -= cardWidth;
-            if (position < maxPosition) { 
-                position = maxPosition;
-            }
-            carouselTrack.style.transform = `translateX(${position}px)`;
-            carouselTrack.style.transition = 'transform 0.4s ease-in-out';
+    nextButton.addEventListener('click', () => {
+        prevButton.classList.remove("none");
+
+        // Si estamos cerca del final, ocultamos el botón 'Next'
+        if (carousel.scrollLeft >= (maxScroll - cardWidth * visibleCards)) {
+            nextButton.classList.add("none");
         }
+
+        // Desplazamiento suave hacia la derecha
+        carousel.scroll({
+            left: carousel.scrollLeft + (cardWidth * visibleCards),
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
     // Botón 'Prev' - Mueve hacia la derecha
-    prevButton.addEventListener('click', function() {
-        if (position < 0) { 
-            position += cardWidth;
-            if (position > 0) { 
-                position = 0;
-            }
-            carouselTrack.style.transform = `translateX(${position}px)`;
-            carouselTrack.style.transition = 'transform 0.4s ease-in-out';
+    prevButton.addEventListener('click', () => {
+        nextButton.classList.remove("none");
+
+        // Si estamos cerca del inicio, ocultamos el botón 'Prev'
+        if (carousel.scrollLeft <= cardWidth * visibleCards) {
+            prevButton.classList.add("none");
         }
+
+        // Desplazamiento suave hacia la izquierda
+        carousel.scroll({
+            left: carousel.scrollLeft - (cardWidth * visibleCards),
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 });
 
+
 // Menú hamburguesa
+const menuButton = document.querySelector('.close-button');
+const menuContent = document.querySelector('.menu-content');
+
 menuButton.addEventListener('click', () => {
-    // Alterna la clase 'active' en el contenedor del menú
     menuContent.classList.toggle('active');
 
-    // Alterna la clase 'active' en la imagen del botón
     const menuImage = menuButton.querySelector('img');
     menuImage.classList.toggle('active');
 });
