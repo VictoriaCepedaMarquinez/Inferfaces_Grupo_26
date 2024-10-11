@@ -8,17 +8,6 @@ body {
     background-color: #13010f;
 }
 
-/*barra de navegacion*/
-.menu-button{
-  width: 60px;
-  height: 50px;
-  margin-right: 10%;
-}
-
-.menu-button img {
-    object-fit: fill;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -40,22 +29,44 @@ nav div input{
     width: 40%;
 }
 
+.btn-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.btn-menu div{
+    background-color: black;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+
+.btn-menu.active div:first-child{
+    transform: rotate(41deg);
+    
+}
+
+.btn-menu.active div:nth-child(2){
+    opacity: 0;
+}
+
+.btn-menu.active div:last-child{
+    transform: rotate(-41deg);
+}
+
 .logout-btn{
     margin-left: 10%;
 }
   
-.close-button {
-    display: flex;
-    margin: 0px 14px 0px 15px;
-    color: white;
-    border: none;
-    padding: 10px 4px;
-    border-radius: 12px;
-    cursor: pointer;
-    background-color: transparent;
-    transition: background-color 0.3s;
-}
-
 /* Estilos para el contenedor del menu (oculto por defecto en pantallas pequeñas) */
 .menu-content {
     display: none;
@@ -68,6 +79,13 @@ nav div input{
     z-index: 10;
 }
 
+.menu-content span{
+    margin-left: 10%;
+}
+ .menu-content img{
+    height: 25px;
+    width: 25px;
+ }
 .sections {
     position: relative;
     z-index: 5;
@@ -75,21 +93,6 @@ nav div input{
 /* Mostrar el menú cuando la clase 'active' esté presente */
 .menu-content.active {
     display: flex;
-}
-
-/* Estilos generales para el botón de hamburguesa */
-.close-button {
-    display: flex;
-    margin: 0px 14px 0px 15px;
-    color: white;
-    border: none;
-    padding: 6px 4px;
-    border-radius: 12px;
-    background-color: transparent;
-    transition: background-color 0.3s;
-}
-.close-button img.active {
-    content: url('../img/close-button-x.svg');
 }
 
 /* Mostrar en pantallas grandes */
@@ -130,10 +133,7 @@ nav div input{
         padding: 20px;
     }
 
-    /* No ocultar en pantallas grandes */
-    .close-button {
-        display: flex;
-    }
+    
 }
 
 
