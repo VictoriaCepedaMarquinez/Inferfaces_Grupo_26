@@ -397,21 +397,35 @@ nav div input{
     transform: scale(1.2);
   }
   
-.rotate-left {
-    transform: rotateY(-25deg);
-  }
-  
+
+/* Animación de rotación */
 .rotate-right {
-    transform: rotateY(25deg);
-  }
+    transition: transform 0.5s ease;
+    transform: rotateY(60deg);
+}
+
+.rotate-left {
+    transition: transform 0.5s ease;
+    transform: rotateY(-60deg);
+}
+
+/* Volver a la posición original */
+.reset-rotation {
+    transform: rotateY(0deg);
+    pointer-events: auto;
+}
+
+.no-pointer-events {
+    pointer-events: none;
+}
 
 
 #prevBtn,
 #nextBtn {
-  position: absolute; /* Posiciona los botones de forma absoluta */
-  top: 50%; /* Centra verticalmente */
+  position: absolute; 
+  top: 50%; 
   transform: translateY(-50%); /* Ajusta la posición verticalmente */
-  z-index: 10; /* Asegúrate de que los botones queden por encima de las tarjetas */
+  z-index: 10; /* Asegúra de que los botones queden por encima de las tarjetas */
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
   color: white;
@@ -423,14 +437,12 @@ nav div input{
 }
 
 #prevBtn {
-  left: 20px; /* Posición del botón anterior (izquierda) */
+  left: 20px;
 }
 
 #nextBtn {
-  right: 20px; /* Posición del botón siguiente (derecha) */
+  right: 20px; 
 }
-
-
 
 /*footer*/
 footer {
@@ -457,6 +469,8 @@ footer div p{
 }
 
 /*fin del footer*/
+
+
 
 
 

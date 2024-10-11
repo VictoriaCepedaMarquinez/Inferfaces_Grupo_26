@@ -1,6 +1,5 @@
-// Configuración para el carrusel
-const tracks = document.querySelectorAll('.carousel-track'); // Selecciona todos los tracks
-const visibleCards = 3; // Número de tarjetas visibles en el carrusel
+const tracks = document.querySelectorAll('.carousel-track'); 
+const visibleCards = 3; 
 
 tracks.forEach((carouselTrack) => {
     const nextButton = carouselTrack.querySelector('#nextBtn');
@@ -28,6 +27,7 @@ tracks.forEach((carouselTrack) => {
             top: 0,
             behavior: 'smooth'
         });
+        rotateCards('left', carousel);
     });
 
     // Botón 'Prev' - Mueve hacia la derecha
@@ -45,8 +45,42 @@ tracks.forEach((carouselTrack) => {
             top: 0,
             behavior: 'smooth'
         });
+        rotateCards('right', carousel);
     });
 });
+
+function rotateCards(direction, carousel) {
+    const cards = carousel.querySelectorAll('.card');
+  
+    cards.forEach(card => {
+      card.classList.add('no-pointer-events');
+    });
+  
+    if (direction === 'right') {
+        cards.forEach(card => {
+            card.classList.add('rotate-right');
+        });
+    } else {
+        cards.forEach(card => {
+            card.classList.add('rotate-left');
+        });
+    }
+  
+    // Después de un tiempo, volver a la posición original y eliminar las clases de rotación
+    setTimeout(() => {
+        cards.forEach(card => {
+            card.classList.remove('rotate-right', 'rotate-left');
+            card.classList.add('reset-rotation'); // Volver a la posición original
+        });
+  
+        // Reactivar los eventos en las tarjetas
+        setTimeout(() => {
+            cards.forEach(card => {
+                card.classList.remove('reset-rotation', 'no-pointer-events');
+            });
+        }, 500); // Tiempo de espera para restablecer la rotación
+    }, 400); 
+  }
 
 
 // Menú hamburguesa
