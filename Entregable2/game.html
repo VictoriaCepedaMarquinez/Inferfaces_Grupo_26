@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Expletus+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Expletus+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+
 
 </head>
 
 <body>
     <nav>
         <div>
-           <div class="menu-button">
-              <button class="close-button"><img src="img/hamburger_button.svg" alt="image button"></button>
-           </div>
-           <div>
-               <img src="img/Logo.png" alt="" srcset="">
-           </div>
+            <button id="menu-btn" class="btn-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <div>
+                <a href="index.html"> <img src="img/Logo.png" alt="" srcset=""></a>
+            </div>
         </div>
         <div>
             <input type="text" placeholder="Search" id="search">
@@ -27,35 +32,99 @@
             <div><img src="img/Carrito.svg" alt=""></div>
             <button class="logout-btn">Log out</button>
         </div>
-        
+
         <!-- Contenedor del menu -->
         <div class="menu-content">
             <ul>
-                <li><a href="#"><img src="img/House.svg" alt=""> Home</a></li>
-                <li><a href="#"><img src="img/Star.svg" alt=""> News</a></li>
-                <li><a href="#"><img src="img/TwoPlayers.svg" alt=""> Two Players</a></li>
-                <li><a href="#"><img src="img/Cook.svg" alt="">Cook</a></li>
-                <li><a href="#"><img src="img/LogOut.svg" alt="">Log out</a></li>
+                <li><a href="index.html"><img src="img/House.svg" alt=""> <span>Home</span></a></li>
+                <li><a href="#"><img src="img/Star.svg" alt=""> <span>News</span></a></li>
+                <li><a href="#"><img src="img/TwoPlayers.svg" alt=""> <span>Two Players</span></a></li>
+                <li><a href="#"><img src="img/Cook.svg" alt=""><span>Cook</span></a></li>
+                <li><a href="#"><img src="img/LogOut.svg" alt=""><span>Log out</span></a></li>
             </ul>
         </div>
     </nav>
+
+
     <div class="game-conteiner">
-        <div class="ruta">Back | My games > Logical > Connect Four</div>
+        <h3>Back | My games > Logical > Connect Four</h3>
         <div class="game">
             <div class="share"><img src="img/Share.svg" alt=""></div>
-            <img class="background-image" src="img/Sims4.png" alt="Imagen de fondo">
-            <div class="img-content">
-                <div class="description-game">
-                    <h2>How to Play Connect Four</h2>
-                    <h3>Connect Four is a two-player strategy game. Players take turns dropping colored discs into a
-                        vertical grid. The goal is to be the first to form a horizontal, vertical, or diagonal line of
-                        four consecutive discs. The game ends when one player connects four discs or the grid is full
-                        without a winner, resulting in a draw.</h3>
-                </div>
+            <div class="description-game">
+                <h2>How to Play Connect Four</h2>
+                <h4>Connect Four is a two-player strategy game. Players take turns dropping colored discs into a
+                    vertical grid. The goal is to be the first to form a horizontal, vertical, or diagonal line of
+                    four consecutive discs. The game ends when one player connects four discs or the grid is full
+                    without a winner, resulting in a draw
+                    .
+                </h4>
             </div>
-            <button class="bottonPlay">Play</button>
+            <button class="cardPlaybutton">PLAY</button>
         </div>
     </div>
+
+    <div class="conteiner-commets">
+        <div class="comments-section">
+            <h3>Comments on the game</h3>
+            <div class="comments">
+                <div class="user-comment">
+                    <div class="user-avatars">
+                        <span><img src="img/User.svg" alt=""></span>
+                        <div class="nick">
+                            <p>NickName</p>
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <p>Epic game!</p>
+                    </div>
+                </div>
+                <div class="user-comment">
+                    <div class="user-avatars">
+                        <span><img src="img/User.svg" alt=""></span>
+                        <div class="nick">
+                            <p>NickName</p>
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <p>Epic game!</p>
+                    </div>
+                </div>
+                <div class="user-comment">
+                    <div class="user-avatars">
+                        <span><img src="img/User.svg" alt=""></span>
+                        <div class="nick">
+                            <p>NickName</p>
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <p>Epic game!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-addComent">
+                <img src="img/Usercomment.svg" alt="">
+                <textarea placeholder="Write your comment here"></textarea>
+
+            </div>
+            <button class="add-comment">Add comment</button>
+
+        </div>
+    </div>
+    <div class="conteiner-recommended">
+        <div class="recommended-games">
+            <h3>For you</h3>
+            <div class="game-thumbnails">
+                <img src="img/Rayman.svg" alt="Game 1">
+                <img src="img/Rayman.svg" alt="Game 2">
+                <img src="img/Rayman.svg" alt="Game 3">
+                <img src="img/Rayman.svg" alt="Game 4">
+                <img src="img/Rayman.svg" alt="Game 5">
+                <img src="img/Rayman.svg" alt="Game 6">
+                <img src="img/Rayman.svg" alt="Game 7">    
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div>
             <h4>GAME LIBRARY</h4>
