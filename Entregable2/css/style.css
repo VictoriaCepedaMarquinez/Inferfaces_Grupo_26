@@ -60,39 +60,71 @@ input::placeholder {
     color: #d1b3c4;
 }
 
-.register-btn, .singin-btn {
-    background-color: #A10082;
+.register-btn, .singin-btn{
+    background-color: #A10082; /* Color de fondo inicial */
     border: none;
-    color: #FFFFFF;
+    color: #FFFFFF; /* Color del texto inicial */
     padding: 10px;
     border-radius: 20px;
     font-size: 16px;
     margin-top: 50px;
     width: 100%;
     cursor: pointer;
+    position: relative; /* Necesario para el efecto */
+    overflow: hidden; /* Ocultar el desbordamiento */
+    text-align: center; /* Centrar el texto */
+    transition: color 0.3s ease; /* Transición para el color del texto */
 }
 
-.singin-btn{
-    background-color: #CB0675;
-    margin-top: 0;
-    margin-bottom: 2%;
-    box-shadow: 1px 1px 4px rgba(203, 6, 117, 100);
-  
+.register-btn::before, .singin-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #D5006D, #A10082); /* Gradiente */
+    transform: translateY(100%); /* Moverse hacia abajo */
+    transition: transform 0.3s ease; /* Transición para el efecto */
+    z-index: 0; /* Asegura que el fondo esté detrás del texto */
+}
+
+.register-btn:hover::before, .singin-btn:hover::before {
+    transform: translateY(0); 
+}
+
+.register-btn:hover::after {
+    content: 'Register';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1; 
+}
+
+.singin-btn:hover::after{
+    content: 'Sing In';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1; 
 }
 
 .singIn{
     color:#FFFFFF;
     font-size:16px;;
     text-decoration: none;
-}
-
-
-.register-btn:hover {
-    background-color: #270020;
-}
-
-.singin-btn:hover {
-    background-color: #68003B;
 }
 
 .signin {
@@ -321,8 +353,22 @@ nav div input{
 
 .logout-btn{
     margin-left: 10%;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
+.logout-btn:hover{
+    background-color: #270020;
+}
+
   
+.logout-btn a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Hereda el color del botón */
+    display: block; /* Asegura que el enlace ocupe todo el botón */
+    height: 100%; /* Opción para que el enlace ocupe todo el botón */
+}
+
 /* Estilos para el contenedor del menu (oculto por defecto en pantallas pequeñas) */
 .menu-content {
     display: none;
