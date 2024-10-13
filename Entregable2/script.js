@@ -2,24 +2,27 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Simulación de tiempo de carga o espera de la carga del contenido
     setTimeout(function () {
-        // Oculta la pantalla de carga
-        document.getElementById('loadingScreen').style.display = 'none';
-        
-        // Muestra el contenido principal
-        document.getElementById('mainContent').style.display = 'block';
-    }, 3000); // 3 segundos de tiempo de espera simulado
+        // Oculta la pantalla de carga y muestra el contenido principal utilizando clases
+        document.getElementById('loadingScreen').classList.remove('visible');
+        document.getElementById('loadingScreen').classList.add('hidden');
+
+        document.getElementById('mainContent').classList.remove('hidden');
+        document.getElementById('mainContent').classList.add('visible');
+    }, 3000); 
 
     // Agregar evento al botón para cargar nueva página
     document.getElementById('loadPageButton').addEventListener('click', function (event) {
-        event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
-        document.getElementById('loadingScreen').style.display = 'flex'; // Mostrar pantalla de carga
+        event.preventDefault(); 
+        document.getElementById('loadingScreen').classList.remove('hidden');
+        document.getElementById('loadingScreen').classList.add('visible');
 
         // Redirigir a la nueva página después de un breve retardo (opcional)
         setTimeout(function () {
             window.location.href = event.target.href; // Navegar a la nueva URL
-        }, 3000); // 1 segundo antes de redirigir
+        }, 3000); // 3 segundos antes de redirigir
     });
 });
+
 /*Fin de pantalla de carga*/
 
 const tracks = document.querySelectorAll('.carousel-track'); 
@@ -129,7 +132,7 @@ const cardAdded = document.querySelector('.cardAdded');
 const loadingAnimation = document.querySelector('.loading-animation');
 
 // Añadir un evento de clic al botón "ADD TO CAR"
-addToCarButton.addEventListener('click', function() {
+addToCarButton.addEventListener('click', ()=> {
     loadingAnimation.style.display = 'block'; // Muestra la animación
     addToCarButton.style.display = 'none'; // Oculta el botón mientras se carga
 
@@ -143,7 +146,7 @@ addToCarButton.addEventListener('click', function() {
 });
 
 // Añadir un evento de clic al botón "ADDED TO CAR"
-removeFromCarButton.addEventListener('click', function() {
+removeFromCarButton.addEventListener('click', ()=> {
     cardAdded.style.display = 'none'; // Oculta la tarjeta añadida
     cardAdd.style.display = 'block'; // Muestra la tarjeta original
     addToCarButton.style.display= '';

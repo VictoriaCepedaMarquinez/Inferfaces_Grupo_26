@@ -156,10 +156,10 @@ label{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Ocupa toda la ventana */
-    width: 100vw;
-    background-color: #13010f; /* Fondo oscuro para la pantalla de carga */
-    position: fixed; /* Fija la pantalla de carga */
+    height: 100%;
+    width: 100%;
+    background-color: #13010f; 
+    position: fixed; 
     top: 0;
     left: 0;
     z-index: 1000; /
@@ -234,7 +234,7 @@ label{
     font-size: 2em;
     font-weight: bold;
     animation: moverTexto 2s infinite;
-    margin-top: 20px; /* Espacio entre los spinners y el texto */
+    margin-top: 20px; 
     
 }
 
@@ -252,6 +252,15 @@ label{
         transform: translateY(40px);
     }
 }
+
+.hidden {
+    display: none; 
+}
+
+.visible {
+    display: flex; 
+}
+
 /*Fin de pantalla de carga*/
 
 
