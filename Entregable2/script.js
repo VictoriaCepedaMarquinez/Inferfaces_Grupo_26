@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById('mainContent').classList.remove('hidden');
         document.getElementById('mainContent').classList.add('visible');
-    }, 3000); 
+    }, 5000); 
 
     // Agregar evento al botón para cargar nueva página
     document.getElementById('loadPageButton').addEventListener('click', function (event) {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Redirigir a la nueva página después de un breve retardo (opcional)
         setTimeout(function () {
             window.location.href = event.target.href; // Navegar a la nueva URL
-        }, 3000); // 3 segundos antes de redirigir
+        }, 5000); // 3 segundos antes de redirigir
     });
 });
 

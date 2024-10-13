@@ -471,7 +471,6 @@ nav div input{
     cursor: pointer;
 }
 
-
 .cardFree .card button::after {
     content: "";
     position: absolute;
@@ -653,6 +652,7 @@ nav div input{
     box-shadow: none;
     padding-top: 3%;
 }
+
 .cardPlay .card button{
     display: flex;
     justify-content: center;
@@ -661,7 +661,6 @@ nav div input{
     color: rgb(255, 255, 255);
     box-shadow: 0 4px 9px #CB0675;
 }
-
 
 .cardPlay .card button::after {
     content: "";
@@ -812,12 +811,13 @@ nav div input{
 /* Animación de rotación */
 .rotate-right {
     transition: transform 0.5s ease;
-    transform: rotateY(60deg);
+    transform: rotateY(60deg) rotateX(15deg) translateZ(60px) translateY(20px);
+
 }
 
 .rotate-left {
     transition: transform 0.5s ease;
-    transform: rotateY(-60deg);
+    transform: rotateY(-60deg) rotateX(15deg) translateZ(60px) translateY(20px);
 }
 
 /* Volver a la posición original */
@@ -906,24 +906,6 @@ footer div p{
     color: white;
     opacity: 60%;
 }
-
-.description-game{
-    text-align: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10%;
-}
-
-.description-game h2{
-    margin: 2% 0;
-}
-
-.description-game h4{
-    font-weight: normal;
-}
-
 .game{
     display: flex;
     flex-direction: column;
@@ -937,13 +919,77 @@ footer div p{
     background-repeat: no-repeat;
 }
 
-.game .cardPlaybutton{
-    border-radius: 20px;
-    width: 25%;
-    height: 25px;
-    margin-bottom: 10%;
- 
+.description-game{
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    margin-top: 10%;
 }
+
+.description-game h2{
+    margin: 2% 0;
+}
+
+.description-game h4{
+    font-weight: normal;
+}
+.buttonPlayGame {
+    font-family: 'Expletus Sans', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 25%;
+    height: 23px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-transform: uppercase;
+    transition: all 0.6s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF0090;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 9px #CB0675;
+    margin-bottom: 10%;
+    overflow: hidden; /* Para que la animación no salga fuera del botón */
+}
+
+.buttonPlayGame img {
+    width: 26px;
+    height: 26px;
+    box-shadow: none;
+    padding-top: 3%;
+}
+
+.buttonPlayGame::after {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-image: radial-gradient(circle, rgba(255, 0, 144, 0.5), rgb(255, 15, 163), rgb(109, 10, 10));
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.buttonPlayGame:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+
+
 
 .conteiner-commets{
     display: flex;
@@ -1059,11 +1105,6 @@ footer div p{
 .game-thumbnails img:hover{
     transform: scale(1.2);
 }
-
-
-
-
-
 
 
 
