@@ -989,26 +989,10 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: #4B013D;
-    padding: 2% 0;
-    padding-left: 6%;
-}
-
-footer div {
-    width: 15%;
+    padding: 2% 6%;
     color: white;
-    text-align: left;
-
 }
 
-footer div h4{
-    margin-bottom: 10%;
-}
-
-footer div p{
-    opacity: 40%;
-}
-
-/*fin del footer*/
 
 
 /* CSS del game.html*/
@@ -1262,12 +1246,20 @@ footer div p{
         background-color: #13010f;
     }
     #search {
-        display: none;
+        width: 110px;
+        margin-left: 87px;
+        margin-top: 6px;
+    }
+    nav {
+        width: 100%;
     }
     nav div {
         display: flex;
-        width: 44%;
+        width: 27%;
         align-items: center;
+    }
+    nav div a img {
+        width: 166px;
     }
     .menu-content.active {
         display: flex;
@@ -1304,41 +1296,83 @@ footer div p{
     .conteiner-products {
         gap: 40px;
         padding: 5%;
-        position: stick
+        position: stick;
     }
-    .search-btn, .logout-btn {
-        background-color: #4B013D;
-        font-family: 'DM-sans', sans-serif;
-        color: white;
-        padding: 9px;
-        border: none;
-        border-radius: 14px;
-        width: 98px;
-        height: 34px;
+     .logout-btn, .carrito {
+        visibility: hidden;
     }
     #prevBtn, #nextBtn {
         display: none;
     }
+    
     footer {
-        display: flex;
-        justify-content: space-between;
-        background-color: #4B013D;
-        padding: 2% 0;
+        flex-direction: column;
+    }
+
+    footer .footer-section {
         width: 100%;
-        margin-top: 20px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        border-bottom: 1px solid #ffffff55;
     }
-    footer p {
-        font-size: 10px;
+
+    footer .footer-section h4 {
+        font-size: 16px;
+        color: white;
+        margin: 0;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
     }
-    footer h4 {
-        font-size: 8px;
+
+    footer .footer-section p {
+        font-size: 14px;
+        color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+        margin: 0;
     }
-    footer div {
-        width: 26%;
-        margin: 4px;
+
+    /* Sección activa expandida */
+    footer .footer-section.active p {
+        max-height: 100px;
+        padding: 10px 0;
+    }
+
+    .arrow {
+        font-size: 20px; 
+        transition: transform 0.3s; 
+        display: inline; /* aseguramos de que se muestre en mobile */
+    }
+    
+    .footer-section.active .arrow {
+        transform: rotate(90deg);
+        transition: transform 0.3s; 
     }
 }
 
+/* Estilos para escritorio */
+@media(min-width: 769px) {
+    .arrow {
+        display: none; /* oculta la flecha en escritorio */
+    }
+    footer div {
+        width: 15%;
+        text-align: left;
+    }
+    
+    footer div h4 {
+        margin-bottom: 10%;
+    }
+    
+    footer div p {
+        opacity: 0.8;
+    }
+}
+   
 
 
 

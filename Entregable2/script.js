@@ -167,3 +167,16 @@ removeFromCarButton.addEventListener('click', ()=> {
 
 
 
+const sections = document.querySelectorAll('.footer-section');
+sections.forEach(section => {
+    section.addEventListener('click', () => {
+        sections.forEach(sec => {
+            if (sec !== section) sec.classList.remove('active');
+        });
+        section.classList.toggle('active');
+    });
+});
+
+
+
+
