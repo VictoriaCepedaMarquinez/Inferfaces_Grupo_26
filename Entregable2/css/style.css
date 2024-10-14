@@ -1324,7 +1324,7 @@ footer div p{
         justify-content: space-between;
         background-color: #4B013D;
         padding: 2% 0;
-        width: 390px;
+        width: 100%;
         margin-top: 20px;
     }
     footer p {
