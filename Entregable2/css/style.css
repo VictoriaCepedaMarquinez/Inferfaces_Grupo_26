@@ -55,6 +55,7 @@
         overflow-x: auto;
     }
     .games-section {
+        margin-bottom: 60px;
         width: 93%;
     }
     .conteiner-products {
@@ -70,8 +71,8 @@
     }
     
     footer {
-        flex-direction: column;
-        width: 92%;
+        flex-direction: column;    
+        width: 90%;
     }
 
     footer .footer-section {
@@ -611,7 +612,7 @@ nav div input{
 .conteiner-products {
     display: flex;                  
     gap: 20px;
-    padding: 2%;  
+    padding: 5%;  
     position: sticky; 
     margin-right: 3%;         
 }
