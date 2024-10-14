@@ -1257,7 +1257,7 @@ footer div p{
     transform: scale(1.2);
 }
 
-@media(max-width: 768px){
+@media(max-width: 844px){
     body {
         background-color: #13010f;
     }
