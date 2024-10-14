@@ -60,20 +60,30 @@ input::placeholder {
     color: #d1b3c4;
 }
 
-.register-btn, .singin-btn{
-    background-color: #A10082; /* Color de fondo inicial */
+.register-btn, .singin-btn {
+    background-color: #A10082;
     border: none;
-    color: #FFFFFF; /* Color del texto inicial */
+    color: #FFFFFF;
     padding: 10px;
     border-radius: 20px;
     font-size: 16px;
     margin-top: 50px;
     width: 100%;
     cursor: pointer;
-    position: relative; /* Necesario para el efecto */
-    overflow: hidden; /* Ocultar el desbordamiento */
-    text-align: center; /* Centrar el texto */
-    transition: color 0.3s ease; /* Transición para el color del texto */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.register-btn a, .singin-btn a {
+    color: inherit;
+    text-decoration: none;
+    display: block; /* Para que el enlace ocupe todo el botón */
+    width: 100%;
+    height: 100%;
+    position: relative; /* Mantener el enlace encima del fondo */
+    z-index: 2; /* Asegura que el enlace sea clicable */
 }
 
 .register-btn::before, .singin-btn::before {
@@ -83,23 +93,23 @@ input::placeholder {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #D5006D, #A10082); /* Gradiente */
-    transform: translateY(100%); /* Moverse hacia abajo */
-    transition: transform 0.3s ease; /* Transición para el efecto */
-    z-index: 0; /* Asegura que el fondo esté detrás del texto */
+    background: linear-gradient(135deg, #D5006D, #A10082);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 0;
 }
 
 .register-btn:hover::before, .singin-btn:hover::before {
-    transform: translateY(0); 
+    transform: translateY(0);
 }
 
-.register-btn:hover::after {
-    content: 'Register';
+.register-btn:hover::after, .singin-btn:hover::after {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     color: #FFFFFF; 
     display: flex; 
     justify-content: center; 
@@ -118,6 +128,12 @@ input::placeholder {
     display: flex; 
     justify-content: center; 
     align-items: center; 
+=======
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+>>>>>>> f6fdc7452e18c76fa21cc8b69dd1c6ec7b9052f6
     z-index: 1;
 }
 
