@@ -60,8 +60,7 @@
     }
     .conteiner-products {
         gap: 40px;
-        padding: 5%;
-        position: stick;
+        position: sticky;
     }
      .logout-btn, .carrito {
         visibility: hidden;
@@ -597,20 +596,15 @@ nav div input{
         text-align: justify;
         padding: 20px;
     }
-
-    
+    .card:hover{
+        transform: scale(1.2);
+    }
 }
-
-
-/*fin barra de navegacion*/
-
 
 .sections {
     color: white;
     margin: 4% 0 0 4% ; 
-
 }
-
 
 .conteiner-products {
     display: flex;                  
@@ -636,7 +630,6 @@ nav div input{
     height: 115px;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
-
 }
 
 .none {
@@ -644,7 +637,7 @@ nav div input{
 }
 
 .card:hover {
-    transform: scale(1.2);
+    transform: scale(none);
     z-index: 1;
     border-radius: 15px; /* Asegura que se mantenga el borde redondeado al hacer hover */
   }
