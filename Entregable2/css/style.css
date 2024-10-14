@@ -7,7 +7,8 @@
         background-color: #13010f;
     }
     #search {
-        margin-top: 8%;
+        margin-left: 17px;
+        margin-top: 6px;
     }
     nav {
         width: 100%;
@@ -24,7 +25,7 @@
         width: 100px;
     }
     nav div a img {
-        width: 110px;
+        width: 140px;
     }
     .menu-content.active {
         display: flex;
@@ -569,6 +570,9 @@ nav div input{
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+    .carousel {
+        overflow: hidden;
+    }
 
     .menu-content.active {
         display: flex;
@@ -611,7 +615,7 @@ nav div input{
 .conteiner-products {
     display: flex;                  
     gap: 20px;
-    padding: 5%;  
+    padding: 2%;  
     position: sticky; 
     margin-right: 3%;         
 }
