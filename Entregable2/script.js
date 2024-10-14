@@ -10,26 +10,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+    const progressBar = document.querySelector('#progressBar');
+    const progressText = document.querySelector('#progressText');
+
+    let progress = 0;
+    const interval = setInterval(function () {
+        progress += 1; // Incremento del progreso
+        progressBar.style.setProperty('--progress-width', progress + '%'); // Actualiza el ancho de la barra
+        progressText.textContent = progress + '%'; // Actualiza el texto del porcentaje
+
+        if (progress >= 100) {
+            clearInterval(interval); // Detener el intervalo cuando llegue al 100%
+        }
+    }, 50); // Intervalo de 50 ms para completar en 5 segundos (100 * 50ms = 5000ms)
+
     // Simulación de tiempo de carga o espera de la carga del contenido
     setTimeout(function () {
-        // Oculta la pantalla de carga y muestra el contenido principal utilizando clases
-        document.getElementById('loadingScreen').classList.remove('visible');
-        document.getElementById('loadingScreen').classList.add('hidden');
+        document.querySelector('#loadingScreen').classList.remove('visible');
+        document.querySelector('#loadingScreen').classList.add('hidden');
+        document.querySelector('#mainContent').classList.remove('hidden');
+        document.querySelector('#mainContent').classList.add('visible');
+    }, 5000); // 5 segundos de duración
 
-        document.getElementById('mainContent').classList.remove('hidden');
-        document.getElementById('mainContent').classList.add('visible');
-    }, 5000); 
-
-    // Agregar evento al botón para cargar nueva página
-    document.getElementById('loadPageButton').addEventListener('click', function (event) {
+    // Evento de carga para el botón "PLAY NOW"
+    document.querySelector('#loadPageButton').addEventListener('click', function (event) {
         event.preventDefault(); 
-        document.getElementById('loadingScreen').classList.remove('hidden');
-        document.getElementById('loadingScreen').classList.add('visible');
+        document.querySelector('#loadingScreen').classList.remove('hidden');
+        document.querySelector('#loadingScreen').classList.add('visible');
 
-        // Redirigir a la nueva página después de un breve retardo (opcional)
-        setTimeout(function () {
-            window.location.href = event.target.href; // Navegar a la nueva URL
-        }, 5000); // 3 segundos antes de redirigir
+        let playProgress = 0;
+        const playInterval = setInterval(function () {
+            playProgress += 1;
+            progressBar.style.setProperty('--progress-width', playProgress + '%');
+            progressText.textContent = playProgress + '%';
+
+            if (playProgress >= 100) {
+                clearInterval(playInterval);
+                window.location.href = event.target.href; // Redirigir cuando llegue al 100%
+            }
+        }, 50); // Mismo tiempo de 5 segundos
     });
 });
 
