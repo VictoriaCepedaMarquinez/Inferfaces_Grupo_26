@@ -7,4 +7,3 @@
 
 * ### [Entregable 2](https://victoriacepedamarquinez.github.io/Inferfaces_Grupo_26/Entregable2/index.html)
 ![image](https://github.com/user-attachments/assets/7f12e8ed-5a3e-4cda-a4b4-0a25ae1be070)
-![image](httos://github.com/user-attachments/assets/7f12e8ed-5a3e-4cda-a4b4-0a25ae1be070)
