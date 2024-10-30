@@ -1096,7 +1096,231 @@ nav div input{
 #nextBtn {
   right: 20px; 
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1D0C19;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  p {
+    text-align: left;
+  }
+  .text-p {
+    text-align: center;
+  }
+  a {
+    color: #a29bb6;
+    text-decoration: none;
+    font-family: "Mukta", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+  }
+  
+  .game-info {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .game-description {
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .game-description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .game-description p {
+    font-size: 16px;
+  }
+  
+  .play-button {
+    background-color: #e8008c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .play-button:hover {
+    background-color: #d0007a;
+  }
+  
+  .comments-section {
+    background-color: #36002d;
+    display: flex;
+    flex-direction: column;
+    padding: 38px;
+    margin: 0 auto;
+    border-radius: 20px;
+    text-align: center;
+    width: 61%;
+    height: 387px;
+  }
+  
+.comments-section h3 {
+    margin-bottom: 20px;
+}
+  
+.comments {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
 
+.comment {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    background-color: #530043;
+    padding: 40px;
+    border-radius: 40px;
+    width: 100%;
+    margin: 0px 20px 20px 0px;
+    min-height: 115px
+}
+
+.user-avatars {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.user-avatars img {
+    width: 38px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    /* margin-left: 20px;*/
+    border-top: 0.5px solid #ddd3d3;
+    margin-top: 2%;
+}
+
+.nick{
+    margin-top: 4%;
+    font-size: 14px;
+    margin-left: 4%;
+    font-weight: 700;
+}
+.nick p{
+    font-size: 16px;
+}
+
+.text-user {
+    margin-left: 2%;
+    margin-top: 10px; /* Ajuste */
+}
+
+p {
+    font-size: 12px;
+    text-align: left;
+}
+  
+textarea {
+    width: 87%;
+    background-color: #530043;
+    height: 50px;
+    padding: 0px 50px; 
+    border-radius: 10px;
+    border: none;
+    margin: 18px 0 10px 0px;
+    resize: none;
+    font-family: "Duru Sans", sans-serif; 
+    font-weight: 600; 
+    font-style: normal;
+    color: #fff; 
+    line-height: 50px; 
+    text-align: left;
+}
+
+/* Placeholder styles */
+textarea::placeholder {
+    font-family: "Duru Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(168, 159, 159);
+    line-height: 50px;
+    padding-left: 10px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+  .content-addComent{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1112px;
+    width: 60%;
+    left: 263px;
+  }
+  
+  .content-addComent img {
+    position: absolute;
+    height: 34px;
+    top: 26px;
+    left: 7px;
+  }
+  .add-comment {
+    display: block;
+    margin: 22px 292px;
+    background-color: #1ab143;
+    font-family: "Duru Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    opacity: 0.8;
+    color: #fff;
+    padding: 10px 19px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .add-comment:hover {
+    background-color: #289444;
+  }
+  
+  .recommended-games {
+    background-color: #36002d;
+    text-align: left;
+    border-radius: 10px;
+    margin: 185px 0px 0px 0px;
+  }
+  
+  .recommended-games h3 {
+    margin: 14px 0px 14px 12px;
+  }
+  
+  .game-thumbnails {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 7px;
+  }
+  
+  .game-thumbnails img {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .game-thumbnails img:hover {
+    transform: scale(1.1);
+  }
+  
 /*footer*/
 footer {
     display: flex;
