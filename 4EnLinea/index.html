@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta 4</title>
+</head>
+<body>
+    <canvas id="miCanvas" width="1000" height="400"></canvas>
+    <div><p id="tiempo-restante">Tiempo restante: 10 segundos</p></div>
+    <p id="turno-actual">Turno de: Jugador 1</p>
+    <p id="tiempo-juego">Tiempo de juego restante: 60 segundos</p>
+    <button id="reiniciar">Reiniciar Juego</button>
+
+    <!-- Scripts de los componentes del juego -->
+    <script src="Jugador.js"></script>
+    <script src="Ficha.js"></script>
+    <script src="Tablero.js"></script>
+    <script src="Temporizador.js"></script>
+    <script src="Juego.js"></script>
+
+    <!-- Script para inicializar el juego -->
+    <script>
+        let juego;
+
+        // Función para iniciar el juego
+        function iniciarJuego() {
+            juego = new Juego("miCanvas");
+        }
+
+        // Evento para el botón de reinicio
+        document.getElementById("reiniciar").addEventListener("click", () => {
+            juego.reiniciarJuego();
+        });
+
+        // Iniciar el juego cuando la página se carga
+        window.onload = iniciarJuego;
+    </script>
+</body>
+</html>
