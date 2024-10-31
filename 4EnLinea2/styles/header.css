@@ -1,0 +1,164 @@
+header {
+    background-color: var(--colorSecundarioLuz1);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 9px 2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 5px 9px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 9px 2px rgba(0,0,0,0.75);
+}
+
+nav {
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.left svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--colorBlancos); /* Color de relleno de los íconos */
+}
+
+
+.center {
+    flex: 1;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.searchInput {
+    width: 50%;
+    height: 50%;
+    padding: 10px 30px 10px 10px;
+    border: 0.5px solid var(--colorPlaceholder);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: transparent;
+    color: var(--colorPlaceholder);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.searchInput::placeholder {
+    color: var(--colorPlaceholder); /* Color del texto de placeholder */
+}
+
+/* Estilo de los íconos en la sección derecha */
+.right {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre los íconos */
+    height: 25px;
+}
+
+.right svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--colorBlancos);
+}
+.user-menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--colorSecundarioLuz2);
+    /* border: 1px solid var(--colorBlancos); */
+    width: 150px;
+    margin-bottom: 20px;
+    z-index: 1000;
+}
+
+
+.user-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-menu li {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.user-menu li a{
+    text-decoration: none;
+    color: var(--colorBlancos);
+
+}
+
+
+.user-menu.active {
+    display: block;
+}
+
+.user-menu ul li:last-child {
+    background-color: var(--colorPrimarioSombra2);
+}
+
+.container-category {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-category {
+    display: none;
+    position: absolute;
+    top: 90%; /* Alinear el menú debajo del icono de hamburguesa */
+    left: 0; /* Alinear el menú a la derecha del icono de hamburguesa */
+    background-color:var(--colorSecundarioLuz1);
+    margin-top: 15px;
+    z-index: 1000;
+
+    box-shadow: 0px 5px 9px 2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 5px 9px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 9px 2px rgba(0,0,0,0.75);
+}
+
+/* Estilo para los elementos de la lista del menú */
+.menu-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-category.active {
+    display: block;
+}
+
+.menu-category li {
+    padding: 10px;
+    display: flex;
+    transition: background-color 0.5s ;
+}
+
+.menu-category li:hover{
+    background-color: var(--colorPlaceholder);
+}
+
+.menu-category li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto';
+}
+
+.menu-category-svg-icon {
+    width: 15px;
+    height: 15px;
+}
