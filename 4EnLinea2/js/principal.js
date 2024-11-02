@@ -69,8 +69,8 @@ window.addEventListener('DOMContentLoaded', () => {
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
             ctx.font = "48px monospace";
-            ctx.strokeText("Sims 4 vs Gta5", canvas.width / 2, 50);
-            ctx.fillText("Sims 4 vs Gta5", canvas.width / 2, 50);
+            ctx.strokeText("Sims 4 vs Gta 5", canvas.width / 2, 50);
+            ctx.fillText("Sims 4 vs Gta 5", canvas.width / 2, 50);
             ctx.strokeText("En linea", canvas.width / 2, canvas.offsetTop + 5  );
             ctx.fillText("En linea", canvas.width / 2, canvas.offsetTop + 5  );
 
@@ -176,9 +176,9 @@ window.addEventListener('DOMContentLoaded', () => {
         let img_menu = new Image();
         img_menu.src = "assets/juegoImages/home.png";
         let fondo = new Image();
-        fondo.src = "assets/juegoImages/DALL·E 2024-11-01 21.24.35 - A vibrant gaming background that combines elements from The Sims 4 and Grand Theft Auto V. On one side, a colorful suburban neighborhood with pastel h 1 (1).png";
+        fondo.src = "assets/juegoImages/fondo.jpg";
         let fondo_gameover = new Image();
-        fondo_gameover.src = "assets/juegoImages/DALL·E 2024-11-01 21.24.35 - A vibrant gaming background that combines elements from The Sims 4 and Grand Theft Auto V. On one side, a colorful suburban neighborhood with pastel h 1 (1).png";
+        fondo_gameover.src = "assets/juegoImages/fondo.jpg";
         
 
         let boton_menu = new Boton(canvas.width - 60, canvas.height - 60, 50, 50, "M", "#11FF11");
