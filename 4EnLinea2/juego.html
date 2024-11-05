@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/game.css">
+    <title>Sims 4 vs Gta 5</title>
+    <link rel="icon" href="image/LogoMundi.png">
+</head>
+<body>
+    <!-- Pantalla de carga -->
+  <div id="loadingScreen" class="loading-container ">
+    <div class="spinners-container">
+      <div class="loading-spinner spinner1"></div>
+      <div class="loading-spinner spinner2"></div>
+      <div class="loading-spinner spinner3"></div>
+    </div>
+    <div class="loading-text">Loading</div>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+      <div class="progress-text" id="progressText">0%</div>
+    </div>
+  </div>
+  <nav>
+    <div>
+      <button id="menu-btn" class="btn-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <div>
+        <a href="index.html"> <img src="image/Logo.png" alt="" srcset=""></a>
+      </div>
+    </div>
+    <div>
+      <input type="text" placeholder="Search" id="search">
+    </div>
+    <div>
+      <div class="carrito"><img src="img/Carrito.svg" alt=""></div>
+      <button class="logout-btn"> <a href="register.html">Log out</a></button>
+    </div>
+    <!-- Contenedor del menu -->
+    <div class="menu-content">
+      <ul>
+        <li><a href="index.html"><img src="image/House.svg" alt=""> <span>Home</span></a></li>
+        <li><a href="#"><img src="image/Star.svg" alt=""> <span>News</span></a></li>
+        <li><a href="#"><img src="image/TwoPlayers.svg" alt=""> <span>Two Players</span></a></li>
+        <li><a href="#"><img src="image/Cook.svg" alt=""><span>Cook</span></a></li>
+        <li><a href="../Entregable2/register.html"><img src="image/LogOut.svg" alt=""><span>Log out</span></a></li>
+      </ul>
+    </div>
+  </nav>
+<div class="title">
+    <h3>Sims4 vs Gta5</h3>
+    <ul><li> <a href="../Entregable2/index.html"> Home -> 4 in line -> Sims4 vs Gta5</a></li></ul>
+</div>
+
+<main class="container">
+
+    <div class="game-Container">
+        <canvas id="canvas" width="900" height="500"></canvas>
+    </div>
+
+</main>
+
+<div class="instructions">
+    <div class="boxInstructions">
+        <h5>¿Como jugar?</h5>
+        <p>Los jugadores deben elegir sus fichas y el modo de juego</p>
+        <p>Una vez iniciado el juego, se le da un tiempo determinado a cada jugador para mover su ficha</p>
+        <p>Los jugadores deben arrastrar su ficha hacia el indicador en la parte superior del tablero.El jugador que logre juntar 4 fichas consecutivas de manera horizontal,vertical o diagonal,se declara ganador.</p>
+    </div>
+  </div>
+<script src="js/script.js"></script>
+<footer>
+    <div class="footer-section">
+        <h4>GAME LIBRARY <span class="arrow">></span></h4>
+        <p>Legal & privacy</p>
+        <p>Online service</p>
+        <p>Update</p>
+        <p>Cookies</p>
+    </div>
+    <div class="footer-section">
+        <h4>HELP CENTER <span class="arrow">></span></h4>
+        <p>Security</p>
+        <p>Support</p>
+        <p>Refunds</p>
+    </div>
+    <div class="footer-section">
+        <h4>ABOUT US <span class="arrow">></span></h4>
+        <p>SVF Gaming Team is a company bringing gamers together through exciting events and competitive experiences. Join us and level up your gaming</p>
+    </div>
+    <div class="footer-section">
+        <h4>ACCESIBILITY <span class="arrow">></span></h4>
+        <p>SVF Gaming Team is dedicated to making gaming inclusive and accessible for everyone, ensuring a welcoming experience for all players.</p>
+    </div>
+    <div class="footer-section">
+        <h4>CATEGORIES <span class="arrow">></span></h4>
+        <p>Beauty</p>
+        <p>Shooter</p>
+        <p>Action</p>
+        <p>Horror</p>
+        <p>Logical</p>
+    </div>
+</footer>
+
+
+
+<script src="js/indicador.js"></script>
+<script src="js/boton.js"></script>
+<script src="js/casilla.js"></script>
+<script src="js/jugador.js"></script>
+<script src="js/ficha.js"></script>
+<script src="js/tablero.js"></script>
+<script src="js/juego.js"></script>
+<script src="js/game.js"></script>
+<script src="js/principal.js"></script>
+<script src="js/index.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+</body>
+</html>
