@@ -1,0 +1,12 @@
+footer div {
+    width: 15%;
+    text-align: left;
+}
+
+footer div h4 {
+    margin-bottom: 10%;
+}
+
+footer div p {
+    opacity: 0.8;
+}
