@@ -7,4 +7,4 @@
 
 * ### [Entregable 2](https://victoriacepedamarquinez.github.io/Inferfaces_Grupo_26/Entregable2/index.html)
 
-* ### [Entregable 3](https://victoriacepedamarquinez.github.io/Inferfaces_Grupo_26/4EnLinea2/juego.html)
+* ### [Entregable 3]([https://victoriacepedamarquinez.github.io/Inferfaces_Grupo_26/4EnLinea2/juego.html](https://github.com/VictoriaCepedaMarquinez/Inferfaces_Grupo_26/blob/gh-pages/4EnLinea2/juego.html))
