@@ -1,3 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Lato:wght@300&family=Noto+Sans:wght@300;500;600&family=Roboto:wght@300;400;500;700;900&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Forum&family=Lato:wght@300&family=Noto+Sans:wght@300;500;600&family=Roboto:wght@300;400;500;700;900&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Forum&family=Lato:wght@300;400;700&family=Noto+Sans:wght@300;500;600&family=Roboto:wght@300;400;500;700;900&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap');
+:root{
+
+    --colorPrimarioLuz3: #CBB2EF;
+    --colorPrimarioLuz2: #BB9FE5;
+    --colorPrimarioLuz1: #B788FF;
+    --colorPrimario: #A970FF;
+    --colorPrimarioSombra1: #9249FF;
+    --colorPrimarioSombra2: #7E2BFD;
+    --colorPrimarioSombra3: #7922FC;
+
+    --colorSecundario: #0E0E10 ;
+    --colorSecundarioLuz1: #1D1D22 ;
+    --colorSecundarioLuz2: #a9097a ;
+    --colorSecundarioLuz3: #43434E ;
+    --colorSecundarioSombra1: #0B0B0C ;
+    --colorSecundarioSombra2: #090808 ;
+    --colorSecundarioSombra3: #0E0C0C;
+
+
+    --colorFree: #00D700;
+    --colorPrice: #FC6A03;
+    --colorBlancos:#EFEFF1;
+    --colorHover: #2E2E2E;
+    --colorPlaceholder: #8989A2;
+
+    --fontSizeLabel:16px;
+
+    --color-facebook: #4267B2;
+    --color-google: #DB4437;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-family:'Roboto',sans-serif ;
+    box-sizing: border-box;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--colorSecundario);
+}
+
+input::placeholder{
+    color: transparent;
+}
 * {
     margin: 0;
     padding: 0;
@@ -578,10 +634,9 @@ nav div input{
         display: flex;
         background-color: #440026;
         top: 63.2px;
-        width: 220px;
-        right: 1127px;
+        width: 440px;
+        right: 1460px;
         border-radius: 0px;
-        height: 240;
         padding: 2px;
     }
     ul li a {
@@ -593,7 +648,7 @@ nav div input{
         margin: 10px 10px 10px 0px;
     }
     ul {
-        width: 200px;
+        width: 480px;
         text-align: justify;
         padding: 20px;
     }
@@ -985,7 +1040,7 @@ nav div input{
     background-color: #4B013D;
     font-family: 'DM-sans', sans-serif;
     color: white;
-    padding: 9px;
+    padding: 5px;
     border: none;
     border-radius: 14px;
     width: 139px;
@@ -1116,6 +1171,7 @@ body {
     font-family: "Mukta", sans-serif;
     font-weight: 700;
     font-style: normal;
+    font-size: 21px;
   }
   
   .game-info {
