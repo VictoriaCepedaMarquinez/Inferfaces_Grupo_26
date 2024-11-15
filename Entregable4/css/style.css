@@ -1,0 +1,350 @@
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-fondo{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1px;
+    max-width: 1280px;
+}
+.content-button{
+    display: flex;
+    position: absolute;
+    left: 100px;
+    top: 4px;
+    z-index: 20;
+    width: 100px;
+    height: 100px;
+}
+
+.content-transition-btn{
+    background-image: url('/img/hamburguesa.svg');
+    width: 52px;
+    height: 44px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin: 10px 0px 0px 10px;
+}
+
+@keyframes transform {
+    0% {transform: rotate(0deg)};
+    50% {transform: rotate(180deg);    }
+    100% {transform: rotate(180deg);}  
+}
+.content-transition-btn-activa {
+    background-image: url('/img/Component.svg');
+    animation: transform;
+    animation-duration: .2s;
+}
+ul , li {
+    margin-bottom: 10px;
+}
+.lista_items {
+    display: none;
+}
+.lista-activa {
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 62px;
+    left: 30px;
+}
+.lista-activa li {
+    background-color: rgb(247, 247, 247);
+    list-style-type: none;
+    padding: 10px;
+    width: 140px;
+    border-radius: 6px;
+    animation: aparecerLi 1s ease forwards;
+    opacity: 0;
+}
+.lista-activa li:nth-child(1){
+    animation-delay: 0ms;
+}
+.lista-activa li:nth-child(2){
+    animation-delay: 2s;
+}
+.lista-activa li:nth-child(3){
+    animation-delay: 4s;
+}
+.content-nav{
+    display: none;
+}
+.content-nav-active{
+    border-radius: 10px;
+    background-color: aqua;
+    width: 150px;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.content-btn-comprar {
+    display: flex;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    position: absolute;
+    top: 16px;
+    left: 940px;
+}
+
+@keyframes aparecerLi {
+    0% {transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scroll {
+    0% {transform:translateY(0)}
+    100% {transform: translateY(-1080px)}
+}
+
+@keyframes fadeInUp {
+    0% {opacity: 0;
+        transform:translateY(50px)}
+    100% {opacity: 1;
+          transform: translateY(0);}
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.1s ease, transform .3s ease;
+}
+
+.visible {
+    animation: fadeInUp 10s forwards;
+}
+
+.content-fondo {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1px;
+}
+.layer {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: repeat-y;
+    background-size: cover;
+    animation: scroll 100s infinite linear;
+}
+.layer-1 {
+    background-image: url('/img/ff.svg');
+    animation: scroll 100s infinite linear;
+}
+.layer-2 {
+    top: 100vh;
+    background-image: url('/img/fondo2.png');
+    animation: scroll 100s infinite linear;
+}
+.layer-3 {
+    z-index: 6;
+    top: 65px;
+    left: 830px;
+    width: 452px;
+    height: 763px;
+    background-image: url('/img/arbol\ 2.png');
+    animation: fadeInUp 6s ease forwards;
+    animation: scroll 80s infinite linear;
+}
+.layer-4 {
+    z-index: 20;
+    top: 0vh;
+    width: 373px;
+    height: 884px;
+    background-image: url('/img/arbol\ 1.png');
+    animation: fadeInUp 6s ease forwards;
+    animation: scroll 76s infinite linear;
+}
+.layer-5 {
+    z-index: 2;
+    top: 47px;
+    left: 34vh;
+    width: 443px;
+    height: 304px;
+    background-image: url('/img/logo\ 1.svg');
+    animation: fadeInUp 2s ease forwards;
+    animation: scroll 50s infinite linear;
+}
+.layer-6 {
+    top: 255px;
+    z-index: 4;
+    width: 235px;
+    left: 1099px;
+    height: 500px;
+    background-image: url('/img/arbol\ 3.svg');
+    animation: fadeInUp 3s ease forwards;
+    animation: scroll 70s infinite linear;
+}
+.layer-7 {
+    z-index: 5;
+    top: 757px;
+    width: 230px;
+    left: 133px;
+    height: 106px;
+    background-image: url('/img/Vector\ \(5\).png');
+    animation: fadeInUp 6s ease forwards;
+    animation: scroll 60s infinite linear;
+}
+.layer-8 {
+    z-index: 20;
+    width: 152px;
+    height: 100px;
+    left: 107px;
+    top: 791px;
+    background-image: url('/img/VectorPiedra\ \(1\).png');
+    animation: fadeInUp 10s ease forwards;
+    animation: scroll 60s infinite linear;
+}
+.layer-9 {
+    z-index: 6;
+    width: 114px;
+    height: 100px;
+    left: 960px;
+    top: 730px;
+    background-image: url('/img/VectorPiedra\ \(2\).png');
+    animation: fadeInUp 10s ease forwards;
+    animation: scroll 60s infinite linear;
+}
+.layer-10 {
+    z-index: 31;
+    width: 143px;
+    height: 94px;
+    left: 197px;
+    top: 836px;
+    background-image: url('/img/Vector\ \(3\).png');
+    animation: fadeInUp 12s ease forwards;
+    animation: scroll 60s infinite linear;
+}
+.layer-12 {
+    z-index: 6;
+    left: 1047px;
+    top: 732px;
+    height: 105px;
+    width: 159px;
+    background-image: url('/img/VectorPiedra\ \(1\).png');
+    animation: fadeInUp 10s ease forwards;
+    animation: scroll 60s infinite linear;
+}
+.layer-11 {
+    z-index: 6;
+    left: 1047px;
+    top: 732px;
+    height: 105px;
+    width: 159px;
+    background-image: url('/img/VectorPiedra\ \(1\).png');
+    animation: fadeInUp 10s ease forwards;
+    animation: scroll 60s infinite linear;
+}
+.layer-12 {
+    z-index: 14;
+    left: 441px;
+    top: 496px;
+    height: 232px;
+    width: 216px;
+    background-image: url('/img/11.svg');
+    animation: fadeInUp 6s ease forwards;
+    animation: scroll 60s infinite linear;
+}
+.layer-13 {
+    z-index: 10;
+    left: 531px;
+    top: 413px;
+    height: 261px;
+    width: 212px;
+    background-image: url('/img/22.png');
+    animation: fadeInUp 10s ease forwards;
+    animation: scroll 50s infinite linear;
+}
+.layer-14 {
+    z-index: 10;
+    left: 688px;
+    top: 346px;
+    height: 361px;
+    width: 216px;
+    background-image: url('/img/33.svg');
+    animation: fadeInUp 2s ease forwards;
+    animation: scroll 50s infinite linear;
+}
+.layer-15 {
+    z-index: 5;
+    left: 1101px;
+    top: 679px;
+    height: 92px;
+    width: 228px;
+    background-image: url('/img/Vector.png');
+    animation: fadeInUp 6s ease forwards;
+    animation: scroll 50s infinite linear;
+}
+.layer-16 {
+    z-index: 2;
+    left: 1044px;
+    top: 613px;
+    height: 108px;
+    width: 246px;
+    background-image: url('/img/Vector.png');
+    animation: fadeInUp 4s ease forwards;
+    animation: scroll 50s infinite linear;
+}
+.layer-17 {
+    z-index: 1;
+    width: 152px;
+    height: 100px;
+    left: 955px;
+    top: 606px;
+    background-image: url('/img/Vector\ \(3\).png');
+    animation: fadeInUp 4s ease forwards;
+    animation: scroll 50s infinite linear;
+}
+.layer-18{
+    z-index: 31;
+    width: 208px;
+    height: 94px;
+    left: 462px;
+    top: 673px;
+    background-image: url('/img/Ellipse\ 2.svg');
+    animation: fadeInUp 5s ease forwards;
+    animation: scroll 50s infinite linear;
+}
+.layer-19 {
+    z-index: 31;
+    width: 208px;
+    height: 94px;
+    left: 688px;
+    top: 648px;
+    background-image: url('/img/Ellipse\ 4.svg');
+    animation: fadeInUp 5s ease forwards;
+    animation: scroll 50s infinite linear;
+}
+.layer-20 {
+    z-index: 31;
+    width: 140px;
+    height: 67px;
+    left: 600px;
+    top: 672px;
+    background-image: url('/img/Ellipse\ 3.svg');
+    animation: fadeInUp 5s ease forwards;
+    animation: scroll 50s infinite linear;
+}
