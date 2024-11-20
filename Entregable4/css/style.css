@@ -1,9 +1,18 @@
+body{
+    margin: 0;
+    margin-left: 110px;
+}
 
+.fondo{
+    width: 1080px;
+  
+}
 .fondo1{
     transform: translateY(4px);
+    width: 1080px;
 }
 .fondo2{
-    width: 100%;
+    width: 1080px;
     height: 100vh;
 }
 .content-button{
@@ -23,25 +32,18 @@
     z-index: 24;
 }
 
-/* Nav normal */
+
+
 .nav {
-    position: relative;
-    z-index: 22;
-    width: 100%;
-    background-color: transparent;
-    transition: all 0.3s ease-in-out;
+  background: linear-gradient(to bottom, rgba(0, 209, 213, 1), rgba(0, 209, 213, 0.12), rgba(1, 208, 213, 0));
+  z-index: 22;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  height: 300px;
+  width: 1080px;
 }
 
-/* Nav sticky */
-.nav.active {
-    z-index: 23;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-image: url('/img/nav.png');
-}
 
 
 .btn-menu{
@@ -130,7 +132,7 @@ ul , li {
     justify-content: flex-end;
     position: absolute;
     top: 16px;
-    left: 940px;
+    left: 800px;
     z-index: 1;
 }
 
@@ -154,19 +156,7 @@ ul , li {
     100% {opacity: 1;
           transform: translateY(0);}
 }
-.nav {
-  background: linear-gradient(to bottom, rgba(0, 209, 213, 1), rgba(0, 209, 213, 0.12), rgba(1, 208, 213, 0));
-  position: fixed;
-  height: 300px;
-  width: 100%;
-}
 
-.nav.fondo{
-    background: linear-gradient(to bottom, rgba(0, 209, 213, 1), rgba(0, 209, 213, 0.12), rgba(1, 208, 213, 0));
-    position: fixed;
-    height: 300px;
-    width: 100%;
-}
 .layer {
     width: 100%;
     position: absolute;
@@ -182,26 +172,25 @@ ul , li {
 }
 .layer-3 {
     z-index: 6;
-    top: 65px;
-    left: 830px;
-    width: 452px;
+    top: 50px;
+    left: 710px;
+    width: 490px;
     height: 763px;
     background-image: url('../img/arbol\ 2.png');
     animation: fadeInUp 6s ease forwards;
 }
 .layer-4 {
     z-index: 20;
-    top: 0vh;
-    width: 373px;
-    height: 884px;
-    left: 8px;
+    width: 380px;
+    height: 880px;
+    left: 110px;
     background-image: url('../img/arbol\ 1.png');
     animation: fadeInUp 6s ease forwards;
 }
 .layer-5 {
     z-index: 2;
     top: 60px;
-    left: 52vh;
+    left: 64vh;
     width: 500px;
     height: 300px;
     background-image: url('../img/logo\ 1.svg');
@@ -217,16 +206,16 @@ ul , li {
     top: -30px; 
     width: 300px;
     height: 130px;
-    left: 68vh;
+    left: 84vh;
     top: 1px;
 }
 
   
 .layer-6 {
-    top: 255px;
+    top: 270px;
     z-index: 4;
     width: 235px;
-    left: 1052px;
+    left: 952px;
     height: 500px;
     background-image: url('../img/arbol\ 3.svg');
     animation: fadeInUp 3s ease forwards;
@@ -246,8 +235,8 @@ ul , li {
         position: absolute;
         width: 152px;
         height: 100px;
-        left: 107px;
-        top: 762px;
+        left: 110px;
+        top: 800px;
         background-image: url('../img/VectorPiedra\ \(1\).png');
         background-size: cover;
         transform: translateX(-10px);
@@ -270,7 +259,7 @@ ul , li {
     z-index: 6;
     width: 114px;
     height: 100px;
-    left: 960px;
+    left: 890px;
     top: 730px;
     background-image: url('../img/VectorPiedra\ \(2\).png');
     animation: fadeInUp 10s ease forwards;
@@ -283,8 +272,8 @@ ul , li {
     z-index: 31;
     width: 143px;
     height: 94px;
-    left: 197px;
-    top: 836px;
+    left: 224px;
+    top: 830px;
     background-image: url('../img/Vector\ \(3\).png');
     animation: fadeInUp 12s ease forwards;
     animation: scroll 60s forwards linear;
@@ -307,8 +296,8 @@ ul , li {
 }
 .layer-11 {
     z-index: 6;
-    left: 1047px;
-    top: 732px;
+    left: 950px;
+    top: 750px;
     height: 105px;
     width: 159px;
     background-image: url('../img/VectorPiedra\ \(1\).png');
@@ -359,10 +348,10 @@ ul , li {
 }
 .layer-15 {
     z-index: 5;
-    left: 1056px;
+    left: 990px;
     top: 679px;
     height: 92px;
-    width: 228px;
+    width: 200px;
     background-image: url('../img/Vector.png');
     animation: fadeInUp 6s ease forwards;
     animation: scroll 50s forwards linear;
@@ -372,10 +361,10 @@ ul , li {
 }
 .layer-16 {
     z-index: 2;
-    left: 1044px;
+    left: 980px;
     top: 613px;
     height: 108px;
-    width: 246px;
+    width: 210px;
     background-image: url('../img/Vector.png');
     animation: fadeInUp 4s ease forwards;
     animation: scroll 50s forwards linear;

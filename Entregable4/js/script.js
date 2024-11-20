@@ -11,6 +11,7 @@ let btn = document.querySelector("#button");
     let contenedor = document.querySelector(".contenedor");
 
     window.addEventListener("scroll", function() {
+        const layer5 = document.querySelector(".layer-5");
         // Verificar si el elemento existe antes de manipularlo
         if (contenedor) {
             if (window.scrollY > 5) { // Cuando el scroll supere 100px
@@ -18,10 +19,10 @@ let btn = document.querySelector("#button");
             }
         }
         if (this.window.scrollY > 50){
-            console.log("hola");
-            nav.classList.add('active');
+            layer5.classList.add("reducirTamanio"); 
         } else {
-            nav.classList.remove('active');
+            
+            layer5.classList.remove("reducirTamanio"); 
         }
 
 
@@ -48,16 +49,5 @@ let btn = document.querySelector("#button");
     
         content.classList.remove('content-ul');
 })
-window.addEventListener("scroll", () => {
-    const layer5 = document.querySelector(".layer-5");
-    const nav = document.querySelector(".nav")
-    const triggerPoint = 50; 
 
-    if (window.scrollY > triggerPoint) {
-        layer5.classList.add("reducirTamanio"); 
-        nav.classList.add("fondo");
-    } else {
-        layer5.classList.remove("reducirTamanio"); 
-    }
-});
 
