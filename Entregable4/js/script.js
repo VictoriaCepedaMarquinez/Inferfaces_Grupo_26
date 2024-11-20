@@ -40,7 +40,7 @@ let btn = document.querySelector("#button");
 
     btn.addEventListener("click", () => {
     
-        btn.classList.toggle('content-transition-btn-activa');
+        btn.classList.toggle('active');
     
         ul.classList.toggle('lista_items');
     

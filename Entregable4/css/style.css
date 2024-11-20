@@ -9,6 +9,7 @@
 .content-button{
     display: flex;
     position: absolute;
+    margin-top: 10px;
     left: 100px;
     top: 8px;
     z-index: 22;
@@ -43,28 +44,43 @@
 }
 
 
-.content-transition-btn{
-    background-image: url('/img/hamburguesa.svg');
-    width: 52px;
-    height: 44px;
-    border-radius: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border: none;
-    margin: 10px 0px 0px 10px;
+.btn-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 55px;
+    height: 50px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
 }
 
-@keyframes transform {
-    0% {transform: rotate(0deg)};
-    50% {transform: rotate(180deg);    }
-    100% {transform: rotate(180deg);}  
+.btn-menu div{
+    border: 5px solid white;
+    background-color: orange;
+    box-shadow: 4px 4px 0px rgb(1, 1, 85);
+    height: 9px;
+    width: 100%;
+    border-radius: 50px;
+    transition: all .5s;
+    transform-origin: left;
 }
-.content-transition-btn-activa {
-    background-image: url('/img/Component.svg');
-    animation: transform;
-    animation-duration: .2s;
+
+.btn-menu.active div:first-child{
+    transform: rotate(38deg);
+    box-shadow: none;
 }
+
+.btn-menu.active div:nth-child(2){
+    opacity: 0;
+}
+
+.btn-menu.active div:last-child{
+    transform: rotate(-38deg);
+    box-shadow: none;
+}
+
 ul , li {
     margin-bottom: 10px;
 }
