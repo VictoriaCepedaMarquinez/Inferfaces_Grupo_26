@@ -4,7 +4,7 @@ let btn = document.querySelector("#button");
     let header = document.querySelector("#header");
     let nav =document.querySelector("#nav");
     let navDisable = document.querySelector(".navDisable");
-    let layer8 = document.querySelector(".layer8");
+    let layer8 = document.querySelector(".layer-8");
     let contentbutton = document.querySelector(".content-button");
     let contentbtn = document.querySelector(".content-btn-comprar");
     let layers = document.querySelectorAll(".layer");
@@ -48,3 +48,16 @@ let btn = document.querySelector("#button");
     
         content.classList.remove('content-ul');
 })
+window.addEventListener("scroll", () => {
+    const layer5 = document.querySelector(".layer-5");
+    const nav = document.querySelector(".nav")
+    const triggerPoint = 50; 
+
+    if (window.scrollY > triggerPoint) {
+        layer5.classList.add("reducirTamanio"); 
+        nav.classList.add("fondo");
+    } else {
+        layer5.classList.remove("reducirTamanio"); 
+    }
+});
+
