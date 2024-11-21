@@ -202,6 +202,30 @@ body{
     box-shadow: none;
 }
 
+#comprar{
+    border: 8px solid #FFFFFF;
+    border-radius: 111px;
+    box-shadow: 4px 5px rgb(1, 1, 85);
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 94.5%;
+    letter-spacing: 11%;
+    color: #FFFFFF;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #83C252;
+    height: 66px;
+    width: 200px;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+#comprar:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 14px 15px rgb(1, 1, 85);
+}
+
 ul , li {
     margin-bottom: 10px;
 }
