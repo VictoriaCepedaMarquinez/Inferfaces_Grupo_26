@@ -53,6 +53,43 @@ body{
     height: 3200px;
     transform: translateY(-1196px);
 }
+.fondo6{
+    width: 1080px;
+    height: 1435px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/Rectangle\ 25.png');
+    transform: translateY(-1100px);
+}
+.content{
+    width: 567px;
+    height: 100px;
+    position: absolute;
+    color: white;
+    top: 242px;
+    left: 200px;
+}
+.content-video{
+    width: 100%;
+    height: 39vh;
+    background-size: cover;
+}
+.content-img{
+    width: 96%;
+}
+.contentPersonaje{
+    width: 496px;
+    position: absolute;
+    left: 385px;
+    top: 0;
+    height: 935px;
+    background-image: url('../img/Numberblocks-Number-3-with-Crown\ 1.png');
+    transition: transform 0.2s ease-out;
+    z-index: 20;
+}
+.title-fondo6{
+    font-size: 38px;
+}
 .mas-amigos {
     display: flex;
     flex-direction: row;

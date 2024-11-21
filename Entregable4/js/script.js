@@ -12,33 +12,27 @@ let contenedor = document.querySelector(".contenedor");
 const cards = document.querySelectorAll('.card');
 const below = document.querySelector('.below');
 
+window.addEventListener('scroll', function() {
+    let scrollPos = window.scrollY;  // Obtiene la posición del scroll
+    let personaje = document.querySelector('.contentPersonaje');  // Selecciona el personaje
+
+    // Velocidad de desplazamiento
+    let velocidadParallax = 0.1;
+
+    // Desplazamiento en Y, ajustando con la velocidad
+    let desplazamiento = scrollPos * velocidadParallax;
+
+    // Aplica el transform para el movimiento en el eje Y
+    personaje.style.transform = `translateY(${ -626 + desplazamiento }px)`;
+});
+
 document.addEventListener("mousemove", (e) => {
-    const xOffset = (window.innerWidth / 2 - e.clientX) * 0.01; // Ajusta la intensidad
+    const xOffset = (window.innerWidth / 2 - e.clientX) * 0.01;
     const yOffset = (window.innerHeight / 2 - e.clientY) * 0.01;
 
     const below = document.querySelector(".below");
     if (below) {
         below.style.transform = `translate(${xOffset}px, ${yOffset}px)`; // Solo depende del mouse
-    }
-});
-document.addEventListener("scroll", () => {
-    const textItems = document.querySelectorAll(".text-item");
-    const dynamicImage = document.getElementById("dynamic-image");
-
-    let selectedImage = null;
-
-    textItems.forEach((item) => {
-        const rect = item.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
-            selectedImage = item.getAttribute("data-image");
-        }
-    });
-
-    if (selectedImage) {
-        dynamicImage.style.backgroundImage = `url(${selectedImage})`;
-        dynamicImage.style.opacity = 1; // La imagen se actualiza
-    } else {
-        dynamicImage.style.opacity = 0; // Ocultar si no hay imagen seleccionada
     }
 });
 
