@@ -417,6 +417,111 @@ ul , li {
     }
 }
 
+/* Estilo para el Pre Footer */
+.pre-footer {
+    position: relative;
+    width: 1080px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Estilo para el formulario */
+.formulario {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.formulario input, .formulario button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.formulario button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para los GIFs de los personajes */
+.personajes-gif {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.personajes-gif img {
+    width: 100px; /* Ajusta el tamaño de los GIFs según sea necesario */
+    height: auto;
+}
+
+/* Estilo para las nubes con parallax */
+.nubes-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.nube {
+    position: absolute;
+    top: 50%;
+    left: -150px;
+    width: 200px;
+    height: 100px;
+    background-image: url('nube.png'); /* Asegúrate de tener una imagen de nube */
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.nube-1 {
+    animation: parallax1 15s linear infinite;
+}
+
+.nube-2 {
+    animation: parallax2 20s linear infinite;
+}
+
+.nube-3 {
+    animation: parallax3 25s linear infinite;
+}
+
+/* Efecto parallax */
+@keyframes parallax1 {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes parallax2 {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes parallax3 {
+    0% {
+        left: -250px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
 /*@keyframes scroll {
     0% {background-position-x: 0px;}
     100% {background-position-x: -1080;}
@@ -701,10 +806,13 @@ ul , li {
 
 
 .textoDiversion {
+    position:absolute;
     font-weight: 600;
     font-style: normal;
     font-size: 60px;
     margin-left: 100px;
+    left: 0px;
+    top: 0;
 }
 
 .fondo5 .texto {
@@ -713,7 +821,7 @@ ul , li {
     width: 467px;
     display: flex;
     flex-direction: column;
-    gap: 267px;
+    gap: 210px;
 }
 
 .fondo5 .texto .block {
