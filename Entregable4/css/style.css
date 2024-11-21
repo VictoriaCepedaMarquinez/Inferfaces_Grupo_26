@@ -44,6 +44,72 @@ body{
     background-size: cover;
     padding-top: 250px;
 }
+.fondo5{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    width: 1080px;
+    height: 3200px;
+    transform: translateY(-1196px);
+}
+.mas-amigos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sticky-images-container {
+    flex: 1;
+    position: relative;
+    top: 0;
+    height: 24vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.image-transition {
+    width: 90%;
+    height: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; /* Ahora la imagen sigue el flujo natural del documento */
+    transition: opacity 0.5s ease, background-image 0.5s ease;
+    z-index: 0;
+}
+
+.scrolling-text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.text-item {
+    margin-bottom: 40px;
+    padding: 10px;
+    border-left: 4px solid #007bff;
+    position: relative;
+}
+
+.text-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-item p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
 .content-general{
     display: flex;
     justify-content: space-around;
