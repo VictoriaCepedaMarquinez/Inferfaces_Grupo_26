@@ -39,7 +39,7 @@ body{
     margin: 612px 0px 0px 0px;
     height: 1000px;
     width: 1080px;
-    background-image: url('../img/Rectangle\ 26.png');
+    background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 250px;
@@ -84,6 +84,35 @@ body{
 .card.show {
     opacity: 1; /* Hace visible */
     transform: translateY(0); /* Vuelve a su posición original */
+}
+.fondo4{
+    width: 1080px;
+    height: 971px;
+    transform: translateY(-1196px);
+    background-image: url('../img/Rectangle\ 26.png');
+}
+.content-fondo4{
+    width: 59%;
+    height: 300px;
+    text-align: center;
+    font-size: 45px;
+    position: absolute;
+    color: white;
+    top: 131px;
+}
+.above{
+    width: 100%;
+    margin-left: 220px;
+}
+.below {
+    width: 1080px;
+    height: 642px;
+    background-size: cover;
+    background-image: url('../img/asdasds 1.png'); 
+    display: flex;
+    position: relative; 
+    transition: transform 0.1s ease-out; 
+    transform: translate(0, 0); /* Posición inicial */
 }
 .conteiner-5, .container-nro4 {
     flex: 0 1 auto; /* Permite que los contenedores mantengan su tamaño */

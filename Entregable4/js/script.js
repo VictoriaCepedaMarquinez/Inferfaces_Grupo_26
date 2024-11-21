@@ -10,6 +10,18 @@ let contentbtn = document.querySelector(".content-btn-comprar");
 let layers = document.querySelectorAll(".layer");
 let contenedor = document.querySelector(".contenedor");
 const cards = document.querySelectorAll('.card');
+const below = document.querySelector('.below');
+
+document.addEventListener("mousemove", (e) => {
+    const xOffset = (window.innerWidth / 2 - e.clientX) * 0.01; // Ajusta la intensidad
+    const yOffset = (window.innerHeight / 2 - e.clientY) * 0.01;
+
+    const below = document.querySelector(".below");
+    if (below) {
+        below.style.transform = `translate(${xOffset}px, ${yOffset}px)`; // Solo depende del mouse
+    }
+});
+
 
 window.addEventListener("scroll", function () {
     const layer5 = document.querySelector(".layer-5");
