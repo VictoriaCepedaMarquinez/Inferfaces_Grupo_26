@@ -21,6 +21,26 @@ document.addEventListener("mousemove", (e) => {
         below.style.transform = `translate(${xOffset}px, ${yOffset}px)`; // Solo depende del mouse
     }
 });
+document.addEventListener("scroll", () => {
+    const textItems = document.querySelectorAll(".text-item");
+    const dynamicImage = document.getElementById("dynamic-image");
+
+    let selectedImage = null;
+
+    textItems.forEach((item) => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+            selectedImage = item.getAttribute("data-image");
+        }
+    });
+
+    if (selectedImage) {
+        dynamicImage.style.backgroundImage = `url(${selectedImage})`;
+        dynamicImage.style.opacity = 1; // La imagen se actualiza
+    } else {
+        dynamicImage.style.opacity = 0; // Ocultar si no hay imagen seleccionada
+    }
+});
 
 
 window.addEventListener("scroll", function () {
