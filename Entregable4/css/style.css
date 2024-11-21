@@ -11,7 +11,7 @@ body{
  
 }
 .fondo2{
-    height: 1000px;
+
     width: 1080px;
     background-image: url("../img/fondo2.png");
     background-repeat: no-repeat;
@@ -217,9 +217,7 @@ body{
     transition: transform 0.1s ease-out; 
     transform: translate(0, 0); /* Posición inicial */
 }
-.conteiner-5, .container-nro4 {
-    flex: 0 1 auto; /* Permite que los contenedores mantengan su tamaño */
-}
+
 
 .container-numeros{
     display: flex;
@@ -235,13 +233,13 @@ body{
     height: 50px;
 }
 .container-nro4 .cardprincipal{
-    margin-left: 300px;
+    margin-left: 250px;
     width: 500px;
 } 
 .conteiner-img{
     display: flex;
     justify-content: space-between;
-    height: 1000px;
+
 }
 
 .conteiner-img .nroC4{
@@ -251,15 +249,14 @@ body{
     position:absolute;
 }
 .conteiner-5{
-    margin: 0;
-    width: 50%;
+
+    
     overflow: hidden;
 }
 
 .conteiner-5 .nro5{
-    margin-left: 5%;
     height: 1100px;
-    width: 110%;
+  
   
 }
 
@@ -699,3 +696,85 @@ ul , li {
     transform: translateX(-50px); /* Asegura que la imagen cubra el área */
     transition: transform 0.5s ease;
 }
+
+
+
+
+.textoDiversion {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 60px;
+    margin-left: 100px;
+}
+
+.fondo5 .texto {
+    position: absolute;
+    left: 600px;
+    width: 467px;
+    display: flex;
+    flex-direction: column;
+    gap: 267px;
+}
+
+.fondo5 .texto .block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fondo5 .texto .block.visible {
+    opacity: 1;
+    transform: translateY();
+}
+
+.fondo5 .texto .block h2 {
+    font-weight: 600;
+    font-style: normal;
+    line-height: 94.5%;
+    font-size: 40px;
+}
+
+.fondo5 .texto .block p {
+    font-weight: 400;
+    font-style: normal;
+    line-height: 94.5%;
+    font-size: 20px;
+}
+
+.fondo5 .sticky {
+    position: sticky;
+    top: 174px;
+}
+
+.fondo5 .sticky img {
+    position: absolute;
+}
+
+.fondo5 {
+    position: relative;
+    height: 5400px;
+}
+
+.fondo5 img{
+    margin-left: 100px;
+}
+
+.fondo5 .hidden {
+    opacity: 0;
+    position: absolute;
+    transform: scale(0.8);
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease-in-out;
+}
+
+.fondo5 .visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+
+

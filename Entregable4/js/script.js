@@ -39,6 +39,7 @@ document.addEventListener("mousemove", (e) => {
 
 window.addEventListener("scroll", function () {
     const layer5 = document.querySelector(".layer-5");
+    fondo5Scroll();
     
     // Movimiento del contenedor
     if (contenedor) {
@@ -82,3 +83,41 @@ btn.addEventListener("click", () => {
     ul.classList.toggle('lista-activa');
     content.classList.remove('content-ul');
 });
+
+
+function fondo5Scroll() {
+    const section = document.querySelector(".fondo5");
+    const blocks = section.querySelectorAll('.block');
+    const images = section.querySelectorAll('.hidden');
+
+    const isInViewport = (element) => {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    };
+
+    const handleScroll = () => {
+        blocks.forEach((block, index) => {
+            if (isInViewport(block)) {
+                block.classList.add('visible');
+
+                // Resetear todas las imágenes
+                images.forEach((img) => img.classList.remove('visible'));
+
+                // Mostrar la imagen correspondiente
+                if (images[index]) {
+                    images[index].classList.add('visible');
+                }
+            }
+        });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+}
+
+
+
+
