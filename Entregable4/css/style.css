@@ -44,15 +44,7 @@ body{
     background-size: cover;
     padding-top: 250px;
 }
-.fondo5{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: flex-end;
-    width: 1080px;
-    height: 3200px;
-    transform: translateY(-1196px);
-}
+
 .fondo6{
     width: 1080px;
     height: 1435px;
@@ -884,11 +876,7 @@ ul , li {
 }
 
 
-
-
-
 .textoDiversion {
-    position:absolute;
     font-weight: 600;
     font-style: normal;
     font-size: 60px;
