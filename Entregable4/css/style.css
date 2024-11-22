@@ -860,7 +860,7 @@ ul , li {
     width: 1080px;
     justify-content: space-around;
     align-items: center;
-    transform: translateY(-594px);
+    margin-top: 200px;
 }
 
 .airplane {
@@ -991,6 +991,20 @@ ul , li {
 .fondo5 .visible {
     opacity: 1;
     transform: scale(1);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width:1080px;
+    height: 700px;
+    background-color: grey;
+}
+
+footer h5, h6{
+    color: white;
+    font-size: 20px;
+    margin: 20px 0px 20px 40px;
 }
 
 
