@@ -420,7 +420,7 @@ ul , li {
 /* Estilo para el Pre Footer */
 .pre-footer {
     position: relative;
-    width: 1080px;
+    width: 100%;
     padding: 20px;
     background-color: #f0f0f0;
 }
@@ -785,7 +785,7 @@ ul , li {
     animation: fadeInUp 5s ease forwards;
     animation: scroll 50s forwards linear;
     background-size: cover;
-    transform: translateX(-50px); /* Asegura que la imagen cubra el área */
+    transform: translateX(-50px); 
     transition: transform 0.5s ease;
 }
 .layer-20 {
@@ -798,9 +798,91 @@ ul , li {
     animation: fadeInUp 5s ease forwards;
     animation: scroll 50s infinite linear;
     background-size: cover;
-    transform: translateX(-50px); /* Asegura que la imagen cubra el área */
+    transform: translateX(-50px); 
     transition: transform 0.5s ease;
 }
+
+.footer-decoration {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px; 
+}
+
+.airplane {
+    position: relative;
+    width: 614px;
+    height: 564px;
+}
+
+.frame {
+    position: absolute;
+    width: 614px;
+    height: 564px;
+    background-repeat: no-repeat;
+    display: none; /* Oculta todos los frames por defecto */
+}
+.content-sprisheet{
+    display: flex;
+    flex-direction: row;
+    width: 1080px;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateY(-594px);
+}
+
+.airplane {
+    position: absolute;
+    width: 471px; /* Ancho de un frame */
+    height: 564px; /* Altura de un frame */
+    left: 20px;
+    scale: 0.5;
+    background: url('../img/css_sprites\ \(1\).png') repeat-x left; /* Para spritesheet horizontal */
+    animation: stay 1s steps(7) infinite;
+}
+.walk {
+    position: absolute;
+    width: 589px;
+    scale: .5;
+    height: 564px;
+    left: 380px;
+    background: url('../img/css_sprites\ \(6\).png') repeat-x left; /* Para spritesheet horizontal */
+    animation: stay2 1s steps(15) infinite;
+}
+.light {
+    position: absolute;
+    width: 189px;
+    scale: 1;
+    height: 564px;
+    left: 941px;
+    background: url('../img/css_sprites\ \(4\).png') repeat-x left; /* Para spritesheet horizontal */
+    animation: stay3 1s steps(5) infinite;
+}
+
+@keyframes stay {
+    0% {
+        background-position: 0px; /* Primer fotograma */
+    }
+    100% {
+        background-position: -3437px; /* Último fotograma */
+    }
+}
+@keyframes stay2 {
+    0% {
+        background-position: 0px; /* Primer fotograma */
+    }
+    100% {
+        background-position: -49650px; /* Último fotograma */
+    }
+}
+@keyframes stay3 {
+    0% {
+        background-position: 0px; /* Primer fotograma */
+    }
+    100% {
+        background-position: -790px; /* Último fotograma */
+    }
+}
+
 
 
 
