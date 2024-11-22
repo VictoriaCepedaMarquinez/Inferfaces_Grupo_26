@@ -1,812 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/LogoMundi.png">
+  <title>SVF</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Expletus+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+
 </head>
+
 <body>
-<div class="loader">
-</div>
-<div class="home">
-    <header>
-        <nav>
-            <div class="left">
-                <div class="container-category">
-                    <svg width="27" height="50" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"
-                         id="menuIcon">
-                        <path
-                                d="M4.375 26.25H23.3333V23.3333H4.375V26.25ZM4.375 18.9583H18.9583V16.0417H4.375V18.9583ZM4.375 8.75V11.6667H23.3333V8.75H4.375ZM30.625 22.7354L25.4042 17.5L30.625 12.2646L28.5688 10.2083L21.2771 17.5L28.5688 24.7917L30.625 22.7354Z"
-                                fill="#EFEFF1" />
-                    </svg>
-                    <div class="menu-category" id="menuCategory">
-                        <ul>
-                            <li>
-                                <svg class="menu-category-svg-icon">
-                                    <image xlink:href="assets/categorias/accion.svg" class="menu-category-svg-icon" />
-                                </svg>
-                                <a href="#">Action</a>
-                            </li>
-                            <li>
-                                <svg class="menu-category-svg-icon">
-                                    <image xlink:href="assets/categorias/guerra.svg" class="menu-category-svg-icon" />
-                                </svg>
-                                <a href="#">War</a>
-                            </li>
-                            <li>
-                                <svg class="menu-category-svg-icon">
-                                    <image xlink:href="assets/categorias/estrategia.svg" class="menu-category-svg-icon" />
-                                </svg>
-                                <a href="#">Strategy</a>
-                            </li>
-                            <li>
-                                <svg class="menu-category-svg-icon">
-                                    <image xlink:href="assets/categorias/terror.svg" class="menu-category-svg-icon" />
-                                </svg>
-                                <a href="#">Terror</a>
-                            </li>
-                            <li>
-                                <svg class="menu-category-svg-icon">
-                                    <image xlink:href="assets/categorias/carreras.svg" class="menu-category-svg-icon" />
-                                </svg>
-                                <a href="#">Races</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <svg width="31" height="35" viewBox="0 0 31 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_495_514)">
-                        <path d="M27.5916 16.25L22.5749 21.25H17.5582L13.1686 25.625V21.25H7.5249V2.5H27.5916V16.25Z"
-                              fill="white" />
-                        <path
-                                d="M6.27083 0L0 6.25V28.75H7.525V35L13.7958 28.75H18.8125L30.1 17.5V0H6.27083ZM27.5917 16.25L22.575 21.25H17.5583L13.1687 25.625V21.25H7.525V2.5H27.5917V16.25Z"
-                                fill="#9146FF" />
-                        <path d="M23.8291 6.875H21.3208V14.375H23.8291V6.875Z" fill="#9146FF" />
-                        <path d="M16.9312 6.875H14.4229V14.375H16.9312V6.875Z" fill="#9146FF" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_495_514">
-                            <rect width="30.1" height="35" fill="white" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </div>
-            <div class="center">
-                <input type="text" class="searchInput " placeholder="Buscar...">
-            </div>
-            <div class="rigth">
-                <svg width="27" height="50" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                            d="M12.0312 29.5312C12.6353 29.5312 13.125 29.0416 13.125 28.4375C13.125 27.8334 12.6353 27.3438 12.0312 27.3438C11.4272 27.3438 10.9375 27.8334 10.9375 28.4375C10.9375 29.0416 11.4272 29.5312 12.0312 29.5312Z"
-                            stroke="#EFEFF1" stroke-width="2.87829" stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                            d="M27.3438 29.5312C27.9478 29.5312 28.4375 29.0416 28.4375 28.4375C28.4375 27.8334 27.9478 27.3438 27.3438 27.3438C26.7397 27.3438 26.25 27.8334 26.25 28.4375C26.25 29.0416 26.7397 29.5312 27.3438 29.5312Z"
-                            stroke="#EFEFF1" stroke-width="2.87829" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M3.28125 5.46875H7.65625L10.9375 24.0625H28.4375" stroke="#EFEFF1" stroke-width="2.87829"
-                          stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                            d="M10.9375 19.6875H27.9891C28.1155 19.6876 28.2381 19.6438 28.336 19.5637C28.4338 19.4835 28.5009 19.372 28.5257 19.2479L30.4944 9.4042C30.5103 9.32482 30.5084 9.24291 30.4888 9.16437C30.4692 9.08584 30.4324 9.01263 30.381 8.95004C30.3297 8.88746 30.2651 8.83705 30.1919 8.80245C30.1187 8.76786 30.0388 8.74994 29.9578 8.75H8.75"
-                            stroke="#EFEFF1" stroke-width="2.87829" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <div class="user-menu-container">
-                    <svg width="27" height="50" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"
-                         id="userIcon">
-                        <path
-                                d="M23.5154 9.84377C23.2474 13.4579 20.5076 16.4063 17.4998 16.4063C14.4919 16.4063 11.7473 13.4586 11.4841 9.84377C11.2107 6.08399 13.8767 3.28125 17.4998 3.28125C21.1228 3.28125 23.7888 6.15235 23.5154 9.84377Z"
-                                stroke="#EFEFF1" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                                d="M17.5002 20.7813C11.5529 20.7813 5.51677 24.0625 4.39978 30.2559C4.26511 31.0024 4.68757 31.7188 5.46892 31.7188H29.5314C30.3134 31.7188 30.7359 31.0024 30.6012 30.2559C29.4836 24.0625 23.4474 20.7813 17.5002 20.7813Z"
-                                stroke="#EFEFF1" stroke-width="2.1875" stroke-miterlimit="10" />
-                    </svg>
-
-                    <div class="user-menu" id="userMenu">
-                        <!-- Contenido del menú desplegable aquí -->
-                        <ul>
-                            <li><a href="#">Mi Perfil</a></li>
-                            <li><a href="#">Amigos</a></li>
-                            <li><a href="login.html">Cambiar de cuenta</a></li>
-                            <li><a href="login.html">Cerrar Sesion</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-
-        <div class="containerCategorie">
-            <div class="titleCategorie">
-                <h2 id="sugerencia">Sugerencias</h2>
-                <img src="assets/iconos/flame-outline.svg" alt="">
-            </div>
-            <div class="wrapper">
-                <i class="arrow fa-solid fa-angle-left left"></i>
-                <ul class="carousel">
-                    <li class="card">
-                        <div class="img"><img src = "assets/images/Gta-V.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>GTA V</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="normalPrice"> </p>
-                                    <p class="specialOffert">$ 6.99</p>
-                                    
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"> <img src = "assets/images/Los-Simpson.jpg" alt = "img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>4 EN LINEA</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert"></p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <a href="juego.html" class="optionGame">
-                                            <p>Jugar</p>
-                                            <img src="assets/iconos/play.svg" alt="">
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Dota%202.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>DOTA II</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert"></p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                            <p>Jugar</p>
-                                            <img src="assets/iconos/play.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Minecraft.jpg"  alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>MINECRAFT</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="normalPrice">$3.99</p>
-                                    <p class="specialOffert"> $2.99</p>
-                                    
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src=assets/images/Resident-Evil-2.jpg  alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>RESIDENT EVIL 2 REMAKE</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="normalPrice"></p>
-                                    <p class="specialOffert">$ 7.99</p>
-                                    
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src=assets/images/Age-Of-Empires-2.jpg alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>AGE OF EMPIRES II DEFINITIVE EDITION</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="normalPrice">$2.99</p>
-                                    <p class="specialOffert">$1.99</p>
-                                    
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <i class="arrow fa-solid fa-angle-right right"></i>
-            </div>
-        </div>
-
-        <div class="containerCategorie">
-            <div class="titleCategorie"><h4>Action</h4></div>
-            <div class="wrapper">
-                <i class="arrow fa-solid fa-angle-left left"></i>
-                <ul class="carousel">
-                    <li class="card">
-                        <div class="img"><img src=assets/images/Counter-Strike-Go-2.jpg alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>COUNTER STRIKE 2</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert"></p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Jugar</p>
-                                        <img src="assets/iconos/play.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Genshin-Impact.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>GENSHIN IMPACT</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert"></p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Jugar</p>
-                                        <img src="assets/iconos/play.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Kirby-Gore.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>KIRBY GORE</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert"></p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Jugar</p>
-                                        <img src="assets/iconos/play.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Proyect-Zomboid.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>PROYECT ZOMBOID</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="normalPrice"></p>
-                                    <p class="specialOffert">$3.99</p>
-                                    
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Resident-Evil-2.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>RESIDENT EVIL 2 REMAKE</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$7.99</p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Spec-Ops-The-Line-Free.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>SPEC OPS THE LINE</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$3.99</p>
-                                    <p class="normalPrice">$4.99</p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <i class="arrow fa-solid fa-angle-right right"></i>
-            </div>
-            </div>
-
-        <div class="containerCategorie">
-            <div class="titleCategorie"><h4>War</h4></div>
-            <div class="wrapper">
-                <i class="arrow fa-solid fa-angle-left left"></i>
-                <ul class="carousel">
-                    <li class="card">
-                        <div class="img"><img src=assets/images/Medal-Of-Honor-Allied-Assault.png alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>MEDAL OF HONOR ALLIED ASSAULT 2</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$1.99</p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Call-Of-Duty.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>CALL OF DUTY BLACK OPS</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert"></p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Jugar</p>
-                                        <img src="assets/iconos/play.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Men-Of-War-Assault-2-Squad.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>MEN OF WAR ASSAULT 2 SQUAD</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert"></p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Jugar</p>
-                                        <img src="assets/iconos/play.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Sniper-4.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>SNIPER 4</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$3.99</p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Battlefield.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>BATTLEFIELD 1942</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$0.99</p>
-                                    <p class="normalPrice">$1.99</p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-                <i class="arrow fa-solid fa-angle-right right"></i>
-            </div>
-        </div>
-
-        <div class="containerCategorie">
-            <div class="titleCategorie"><h4>Strategy</h4></div>
-            <div class="wrapper">
-                <i class="arrow fa-solid fa-angle-left left"></i>
-                <ul class="carousel">
-                    <li class="card">
-                        <div class="img"><img src=assets/images/Civilization-6.jpg alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>Civilization VI</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$1.99</p>
-                                    <p class="normalPrice">$2.99</p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Heroe-Of-Kingdown.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>HEROE OF KINGDOWN</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert"></p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Jugar</p>
-                                        <img src="assets/iconos/play.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Empire-Total-War.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>EMPIRE TOTAL WAR</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert"></p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Jugar</p>
-                                        <img src="assets/iconos/play.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Cities-Skylines.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>CITIES SKYLINES</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$3.99</p>
-                                    <p class="normalPrice">$4.99</p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-                <i class="arrow fa-solid fa-angle-right right"></i>
-            </div>
-        </div>
-
-        <div class="containerCategorie">
-            <div class="titleCategorie"><h4>Fear</h4></div>
-            <div class="wrapper">
-                <i class="arrow fa-solid fa-angle-left left"></i>
-                <ul class="carousel">
-                    <li class="card">
-                        <div class="img"><img src=assets/images/Fear-2.jpg alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>FEAR 2</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$1.99</p>
-                                    <p class="normalPrice">$2.99</p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Silent-Hill-2.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>SILENT HILL 2 REMAKE</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$5.99</p>
-                                    <p class="normalPrice">$6.99</p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Agony.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>AGONY</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$2.99</p>
-                                    <p class="normalPrice">$3.99</p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Chernobylite.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>CHERNOBYLITE</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$4.99</p>
-                                    <p class="normalPrice">$5.99</p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/The-Backrooms-Game.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>THE BACKROOMS</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert"></p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Jugar</p>
-                                        <img src="assets/iconos/play.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Fatal-Frame-II.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>FATAL FRAME II</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert"></p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Jugar</p>
-                                        <img src="assets/iconos/play.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-                <i class="arrow fa-solid fa-angle-right right"></i>
-            </div>
-        </div>
-        <div class="containerCategorie">
-            <div class="titleCategorie"><h4>Races</h4></div>
-            <div class="wrapper">
-                <i class="arrow fa-solid fa-angle-left left"></i>
-                <ul class="carousel">
-                    <li class="card">
-                        <div class="img"><img src=assets/images/Gran-Turismo-Sport.jpg alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>GRAN TURISMO SPORT</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$8.99</p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Need-For-Speed-Most-Wanted.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>NEED FOR SPEED MOST WANTED</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$1.99</p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/MarioKart-8-Deluxe.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>MARIOKART 8</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$2.99</p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/F1-2020.png" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>F1 2020</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$4.99</p>
-                                    <p class="normalPrice">$5.99</p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Ridger-Racer-Type-4.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>RIDGER RACER TYPE 4</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$5.99</p>
-                                    <p class="normalPrice"></p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Rocket-League.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>ROCKET LEAGUE</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$3.99</p>
-                                    <p class="normalPrice">$4.99</p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card">
-                        <div class="img"><img src="assets/images/Dirty-Rally-2.0.jpg" alt="img" draggable="false"></div>
-                        <div class="boxInfoCard">
-                            <h3>DIRTY RALLY</h3>
-                            <div class="action">
-                                <div class="boxOptions">
-                                    <p class="specialOffert">$7.99</p>
-                                    <p class="normalPrice">$8.99</p>
-                                    <div class="optionGame">
-                                        <p>Añadir</p>
-                                        <img src = "assets/iconos/carrito-vender.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-                <i class="arrow fa-solid fa-angle-right right"></i>
-            </div>
-        </div>
-
-    </main>
-
-
-</div>
-<footer>
-    <div class="mainFooter">
-        <div class="footerLinks"> <!--Contenedor de los links-->
-            <div class="column">
-                <h4>Categories</h4>
-                <ul>
-                    <li>War</li>
-                    <li>Strategy</li>
-                    <li>Kitchen</li>
-                    <li>Terror</li>
-                    <li>Race</li>
-                    <li>Cards</li>
-                </ul>
-            </div>
-            <div class="column">
-                <h4>Quick Links</h4>
-                <li>Blogs</li>
-                <li>Support</li>
-                <li>Consulting</li>
-            </div>
-            <div class="column">
-                <h4>About Us</h4>
-                <li>Costumers</li>
-                <li>Offices</li>
-                <li>Company</li>
-            </div>
-        </div>
-        <div class="contact"> <!--info de contacto-->
-            <div class="boxContact">
-                <div class="containerContact">
-                    <a href="#">Contact Us</a>
-                </div>
-                <p>1-800-22153103</p>
-            </div>
-            <div class="boxSocial">
-                <p>Follow on our social networks</p>
-                <div class="socialNetworks">
-                    <img src="assets/redes/ig.png" alt="Logo instagram">
-                    <img src="assets/redes/facebook.png" alt="Logo facebook">
-                    <img src="assets/redes/YouTube - png.png" alt="Logo youtube">
-                    <img src="assets/redes/twitter.png" alt="Logo twitter">
-                </div>
-            </div>
-        </div>
+  <!-- Pantalla de carga -->
+  <div id="loadingScreen" class="loading-container ">
+    <div class="spinners-container">
+      <div class="loading-spinner spinner1"></div>
+      <div class="loading-spinner spinner2"></div>
+      <div class="loading-spinner spinner3"></div>
     </div>
-    <div class="terminos">
-        <div class="box1">
-            <a href="#">Terms Of Use | Privacy Policy | Trademarks | License Aggrements</a>
-            <p>Copyrigth 2016, Twitchi Corporation. All Rigths Reserved</p>
+    <div class="loading-text">Loading</div>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+      <div class="progress-text" id="progressText">0%</div>
+    </div>
+  </div>
+  <nav>
+    <div>
+      <button id="menu-btn" class="btn-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <div>
+        <a href="index.html"> <img src="../4EnLinea2/Image/Logo.png" alt="" srcset=""></a>
+      </div>
+    </div>
+    <div>
+      <input type="text" placeholder="Search" id="search">
+    </div>
+    <div>
+      <div class="carrito"><img src="Image/Carrito.svg" alt=""></div>
+      <button class="logout-btn"> <a href="register.html">Log out</a></button>
+    </div>
+    <!-- Contenedor del menu -->
+    <div class="menu-content">
+      <ul>
+        <li><a href="index.html"><img src="../4EnLinea2/Image/House.svg" alt=""> <span>Home</span></a></li>
+        <li><a href="#"><img src="Image/Star.svg" alt=""> <span>News</span></a></li>
+        <li><a href="#"><img src="Image/TwoPlayers.svg" alt=""> <span>Two Players</span></a></li>
+        <li><a href="#"><img src="Image/Cook.svg" alt=""><span>Cook</span></a></li>
+        <li><a href="register.html"><img src="Image/LogOut.svg" alt=""><span>Log out</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="games-section">
+    <h3 class="sections">Featured & Recommended</h3>
+    <div class="carousel-track">
+      <button id="prevBtn" class="carousel-btn"><img src="Image/FlechaCarrusel.png" alt="Previous"></button>
+      <div class="carousel">
+        <div class="conteiner-products">
+          <div class="cardFree">
+            <div class="card">
+              <img src="../4EnLinea2/Image/sims4.jpg" alt="The Sims 4">
+              <div class="conteiner-info">
+                <div>
+                  <h5>Connect Four</h5>
+                  <h6>The Sims 4 Edition</h6>
+                </div>
+                <h3>FREE</h3>
+              </div>
+              <button> <a href="game.html" id="loadPageButton">▶ PLAY NOW</a></button>
+            </div>
+          </div>
+          <div class="cardContainer">
+            <div class="cardAdd">
+              <div class="card">
+                <img src="../4EnLinea2/Image/gta-v.jpg" alt="GTA V">
+                <div class="conteiner-info">
+                  <h5>Grand Theft Auto V</h5>
+                  <h3>$50.00</h3>
+                </div>
+                <button class="add-to-car"><img src="../4EnLinea2/Image/Carrito.svg" alt="">ADD TO CAR</button>
+                <div class="loading-animation"></div> <!-- Animación de carga -->
+              </div>
+            </div>
+
+            <div class="cardAdded" style="display: none;">
+              <div class="card">
+                <img src="../4EnLinea2/Image/gta-v.jpg" alt="Grand Theft Auto V">
+                <div class="conteiner-info">
+                  <h5>Grand Theft Auto V</h5>
+                  <h3>$50.00</h3>
+                </div>
+                <button class="remove-from-car"><img src="../4EnLinea2/Image/AddedToCar.svg" alt="">ADDED TO CAR</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="cardAdded">
+            <div class="card">
+              <img src="../4EnLinea2/Image/fallguys.jpg" alt="Fall guys">
+              <div class="conteiner-info">
+                <h5>Fall guys</h5>
+                <h3>$10.00</h3>
+              </div>
+              <button class="remove-from-car"><img src="img/AddedToCar.svg" alt="">ADDED TO CAR</button>
+            </div>
+          </div>
+          <div class="cardFree">
+            <div class="card">
+              <img src="../4EnLinea2/Image/Sims41920.jpeg" alt="The Sims 4">
+              <div class="conteiner-info">
+                <div>
+                  <h5>Connect Four</h5>
+                  <h6>The Sims 4 Edition</h6>
+                </div>
+                <h3>FREE</h3>
+              </div>
+              <button> <a href="game.html" id="loadPageButton">▶ PLAY NOW</a></button>
+            </div>
+          </div>
+          <div class="cardFree">
+            <div class="card">
+              <img src="../4EnLinea2/Image/Sims41920.jpeg" alt="The Sims 4">
+              <div class="conteiner-info">
+                <div>
+                  <h5>Connect Four</h5>
+                  <h6>The Sims 4 Edition</h6>
+                </div>
+                <h3>FREE</h3>
+              </div>
+              <button> <a href="game.html" id="loadPageButton">▶ PLAY NOW</a></button>
+            </div>
+          </div>
+          <div class="cardFree">
+            <div class="card">
+              <img src="../4EnLinea2/Image/Sims41920.jpeg" alt="The Sims 4">
+              <div class="conteiner-info">
+                <div>
+                  <h5>Connect Four</h5>
+                  <h6>The Sims 4 Edition</h6>
+                </div>
+                <h3>FREE</h3>
+              </div>
+              <button>▶ PLAY NOW</button>
+            </div>
+          </div>
         </div>
-        <div class="box2">
-            <span>Powered by</span>
-            <p>Interfaces de Usuario e interacción</p>
+      </div>
+      <button id="nextBtn" class="carousel-btn"><img src="Image/FlechaCarrusel.svg" alt="Next"></button>
+    </div>
+
+    <h3 class="sections">My games</h3>
+    <div class="carousel-track">
+      <button id="prevBtn" class="carousel-btn"><img src="Image/FlechaCarrusel.png" alt="Previous"></button>
+      <div class="carousel">
+        <div class="conteiner-products">
+          <div class="cardPlay">
+            <div class="card">
+              <img src="../4EnLinea2/Image/fallguys.jpg" alt="WaterAndFire">
+              <div class="conteiner-info">
+                <h5>Fireboy & Watergirl</h5>
+              </div>
+              <button><img src="Image/JoystickPlay.svg" alt="">PLAY</button>
+            </div>
+          </div>
+          <div class="cardPlay">
+            <div class="card">
+              <img src="../4EnLinea2/Image/fallguys.jpg" alt="WaterAndFire">
+              <div class="conteiner-info">
+                <h5>Fireboy & Watergirl</h5>
+              </div>
+              <button><img src="Image/JoystickPlay.svg" alt="">PLAY</button>
+            </div>
+          </div>
+          <div class="cardPlay">
+            <div class="card">
+              <img src="../4EnLinea2/Image/fallguys.jpg" alt="WaterAndFire">
+              <div class="conteiner-info">
+                <h5>Fireboy & Watergirl</h5>
+              </div>
+              <button><img src="Image/JoystickPlay.svg" alt="">PLAY</button>
+            </div>
+          </div>
+          <div class="cardPlay">
+            <div class="card">
+              <img src="../4EnLinea2/Image/fallguys.jpg" alt="WaterAndFire">
+              <div class="conteiner-info">
+                <h5>Fireboy & Watergirl</h5>
+              </div>
+              <button><img src="Image/JoystickPlay.svg" alt="">PLAY</button>
+            </div>
+          </div>
+          <div class="cardPlay">
+            <div class="card">
+              <img src="../4EnLinea2/Image/fallguys.jpg" alt="WaterAndFire">
+              <div class="conteiner-info">
+                <h5>Fireboy & Watergirl</h5>
+              </div>
+              <button><img src="Image/JoystickPlay.svg" alt="">PLAY</button>
+            </div>
+          </div>
+          <div class="cardPlay">
+            <div class="card">
+              <img src="../4EnLinea2/Image/fallguys.jpg" alt="WaterAndFire">
+              <div class="conteiner-info">
+                <h5>Fireboy & Watergirl</h5>
+              </div>
+              <button><img src="Image/JoystickPlay.svg" alt="">PLAY</button>
+            </div>
+          </div>
         </div>
+      </div>
+      <button id="nextBtn" class="carousel-btn"><img src="Image/FlechaCarrusel.svg" alt="Next"></button>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-section">
+        <h4>GAME LIBRARY <span class="arrow">></span></h4>
+        <p>Legal & privacy</p>
+        <p>Online service</p>
+        <p>Update</p>
+        <p>Cookies</p>
+    </div>
+    <div class="footer-section">
+        <h4>HELP CENTER <span class="arrow">></span></h4>
+        <p>Security</p>
+        <p>Support</p>
+        <p>Refunds</p>
+    </div>
+    <div class="footer-section">
+        <h4>ABOUT US <span class="arrow">></span></h4>
+        <p>SVF Gaming Team is a company bringing gamers together through exciting events and competitive experiences. Join us and level up your gaming</p>
+    </div>
+    <div class="footer-section">
+        <h4>ACCESIBILITY <span class="arrow">></span></h4>
+        <p>SVF Gaming Team is dedicated to making gaming inclusive and accessible for everyone, ensuring a welcoming experience for all players.</p>
+    </div>
+    <div class="footer-section">
+        <h4>CATEGORIES <span class="arrow">></span></h4>
+        <p>Beauty</p>
+        <p>Shooter</p>
+        <p>Action</p>
+        <p>Horror</p>
+        <p>Logical</p>
     </div>
 </footer>
-<script src="js/index.js"></script>
-<script src="js/carousel.js"></script>
+
+  <script src="js/script.js"></script>
 </body>
+
 </html>
