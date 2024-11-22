@@ -9,4 +9,4 @@
 
 * ### [Entregable 3](https://victoriacepedamarquinez.github.io/Inferfaces_Grupo_26/4EnLinea2/juego.html)
 
-* * ### [Entregable 4](https://victoriacepedamarquinez.github.io/Inferfaces_Grupo_26/entregable4/index.html)
+* ### [Entregable 4](https://victoriacepedamarquinez.github.io/Inferfaces_Grupo_26/entregable4/index.html)
